@@ -25,7 +25,7 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
     ```
 
     ```
-    ansible-galaxy collection install _collection_name.tar_
+    ansible-galaxy collection install collection_name.tar
     ```
 
 ### Example Projects
@@ -34,7 +34,7 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
 
 2. [Manage Config Monitoring](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_floating_ip_actions)
 
-3. [Manage IKS Cluster] (https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_loadbalancer_policy)
+3. [Manage IKS Cluster](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_loadbalancer_policy)
 
 4. [Manage IKS Image Security](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_loadbalancer_policy_rule)
 
