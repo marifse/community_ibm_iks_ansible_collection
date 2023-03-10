@@ -14,6 +14,8 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
     ```
     sudo apt install ansible -y
     ```
+3.  Set the path in ansible.cfg and the api key in inventory/main.cfg
+
     **Note**: These automation playbooks have been tested on ansible 2.9.6 on ubuntu 20.04.
 
 ## Install 
