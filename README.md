@@ -1,4 +1,4 @@
-# IBM Cloud Ansible Collections
+# IBM Cloud Kubernetes Ansible Collections
 
 Ansible modules collection for IBM cloud.
 
