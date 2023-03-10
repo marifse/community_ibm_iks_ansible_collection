@@ -30,21 +30,21 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
 
 ### Example Projects
 
-1. [Manage Storage Attachment](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_bare_metal_status_change)
+1. [Manage Storage Attachment](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_storage_attachment)
 
-2. [Manage Config Monitoring](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_floating_ip_actions)
+2. [Manage Config Monitoring](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_config_monitoring)
 
-3. [Manage IKS Cluster](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_loadbalancer_policy)
+3. [Manage IKS Cluster](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_iks_cluster)
 
-4. [Manage IKS Image Security](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_loadbalancer_policy_rule)
+4. [Manage IKS Image Security](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_image_security)
 
-5. [Manage Ingress ALB for IKS](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_loadbalancer_policy_rule_update)
+5. [Manage Ingress ALB for IKS](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_ingress_alb)
 
-6. [Manage NLB Health Monitor](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_virtual_endpoint_gateway_ip_bind-unbind)
+6. [Manage NLB Health Monitor](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_nlb_health_monitor)
 
-7. [Manage Private/Public Service Endpoints](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_vpc_private_ip_reserve)
+7. [Manage Private/Public Service Endpoints](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_private_public_service_endpoint)
 
-8. [Manage Secrets for IKS](https://github.com/marifse/community.ansible.ibm.cloud/tree/main/examples/ibm_vpc_private_ip_reserve_update)
+8. [Manage Secrets for IKS](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_secret)
 
 
 [Install ansible]: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
