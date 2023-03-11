@@ -39,7 +39,7 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
     cd community_ibm_iks_ansible_collection
     ```
 
-2. Modify the any playbook yaml file to set your variables, like to enable image security, modify yaml file and change the IKS cluster id in that
+2. Modify any playbook yaml file to set the variables, like to enable image security, modify the file and change the IKS cluster id in that
 
     ```
     vi ibm/custom_iks_collection/examples/manage_image_security/image_security_enable.yaml
