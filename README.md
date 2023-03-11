@@ -18,7 +18,7 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
 
     **Note**: These automation playbooks have been tested on ansible 2.9.6 on ubuntu 20.04.
 
-## Install 
+## Install & Build the Collection
 
 1. Build and Install collection
     
@@ -31,6 +31,26 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
     ```
 2.  Set the path in ansible.cfg and the api key in inventory/main.cfg
 
+## Running the Playbooks
+
+1. Go into your cloned repo main directory with below command.
+    
+    ```
+    cd community_ibm_iks_ansible_collection
+    ```
+
+2. Modify the any playbook yaml file to set your variables, like to enable image security, modify yaml file and change the IKS cluster id in that
+
+    ```
+    vi ibm/custom_iks_collection/examples/manage_image_security/image_security_enable.yaml
+    ```
+   
+2. Run the playbook
+
+    ```
+    ansible-playbook ibm/custom_iks_collection/examples/manage_image_security/image_security_enable.yaml
+    ```
+    
 ### Example Projects
 
 1. [Manage Storage Attachment](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_storage_attachment)
