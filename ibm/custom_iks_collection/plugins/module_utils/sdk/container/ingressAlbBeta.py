@@ -26,11 +26,11 @@ else:
     HAS_ANOTHER_LIBRARY = True
 
 class IngressALBBeta:
-    """Beta class to support following functionalities.
-        * create_config_monitoring
-        * remove_config_monitoring
-        * update_config_monitoring
-        * discover_config_monitoring
+    """IngressAlbBeta class to support following functionalities.
+        * update_alb
+        * create_alb
+        * disable_alb
+        * enable_alb
     """
 
     # Class Variable

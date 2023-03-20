@@ -26,11 +26,11 @@ else:
     HAS_ANOTHER_LIBRARY = True
 
 class IngressNlbHealthMonitor:
-    """Beta class to support following functionalities.
-        * create_config_monitoring
-        * remove_config_monitoring
-        * update_config_monitoring
-        * discover_config_monitoring
+    """IngressNLBHealthMonitor class to support following functionalities.
+        * enableDisable_health_check_monitor_alb
+        * configure_health_check_monitor_alb
+        * view_health_check_monitor_alb
+        * list_health_check_monitor_alb
     """
 
     # Class Variable

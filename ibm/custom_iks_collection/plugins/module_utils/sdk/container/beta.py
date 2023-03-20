@@ -27,10 +27,13 @@ else:
 
 class Beta:
     """Beta class to support following functionalities.
-        * create_config_monitoring
-        * remove_config_monitoring
-        * update_config_monitoring
-        * discover_config_monitoring
+        * disable_private_service_endpoint
+        * disable_public_service_endpoint
+        * enable_private_service_endpoint
+        * enable_public_service_endpoint
+	* enable_pull_secret
+        * replace_worker
+	* update_master
     """
 
     # Class Variable

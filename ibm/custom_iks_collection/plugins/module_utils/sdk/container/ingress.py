@@ -27,10 +27,8 @@ else:
 
 class Ingress:
     """Ingress Network class to support following functionalities.
-        * create_config_monitoring
-        * remove_config_monitoring
-        * update_config_monitoring
-        * discover_config_monitoring
+        * delete_secret
+        * regenerate_certificate
     """
 
     # Class Variable
@@ -56,7 +54,7 @@ class Ingress:
             status = "ERROR. status_code mismatch"
         return status
    
-    # Method to get the list of worker nodes from cluster
+    # Method to delete secret
     def deleteSecret(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -79,7 +77,7 @@ class Ingress:
         else:
             return True, False
 
-     # Method to get the list of worker nodes from cluster
+     # Method to regenerate certificate
     def regenerateCert(self, data):
         headers = {
             "Authorization": data['iam_token'],

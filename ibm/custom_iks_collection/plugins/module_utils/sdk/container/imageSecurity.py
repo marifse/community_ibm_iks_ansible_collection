@@ -26,11 +26,9 @@ else:
     HAS_ANOTHER_LIBRARY = True
 
 class ImageSecret:
-    """Beta class to support following functionalities.
-        * create_config_monitoring
-        * remove_config_monitoring
-        * update_config_monitoring
-        * discover_config_monitoring
+    """ImageSecurity class to support following functionalities.
+        * disable_image_security
+        * enable_image_security
     """
 
     # Class Variable
@@ -56,7 +54,7 @@ class ImageSecret:
             status = "ERROR. status_code mismatch"
         return status
    
-    # Method to get the list of worker nodes from cluster
+    # Method to disable image security in iks
     def disableImageSecurity(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -80,7 +78,7 @@ class ImageSecret:
         else:
             return True, False
 
-     # Method to get the list of worker nodes from cluster
+     # Method to enable image security in iks
     def enableImageSecurity(self, data):
         headers = {
             "Authorization": data['iam_token'],
