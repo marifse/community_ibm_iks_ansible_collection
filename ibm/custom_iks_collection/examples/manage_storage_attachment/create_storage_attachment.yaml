@@ -1,6 +1,10 @@
 ---
 - name: IKS Custom Ansible Modules
   hosts: localhost
+  # User input variables
+  vars_prompt:
+    - name: resource_group_id
+      prompt: Enter resource_group_id
 
   #Execute before tasks
   pre_tasks:
