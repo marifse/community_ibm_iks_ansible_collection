@@ -54,7 +54,7 @@ class Storage:
             status = "ERROR. status_code mismatch"
         return status
 
-    # Method to get the list of worker nodes from cluster
+    # Method to attach storage volume to worker node in cluster
     def create_storage_attachment(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -78,13 +78,13 @@ class Storage:
         else:
             return True, False, response.json()
 
-    # Method to get the list of worker nodes from cluster
+    # Method to delete storage attachment from worker node in cluster
     def delete_storage_attachment(self, data):
         headers = {
             "Authorization": data['iam_token'],
             "X-Auth-Resource-Group": data['resource_group_id']
             }
-        TARGET_URL = ('/v2/storage/createAttachment')
+        TARGET_URL = ('/v2/storage/deleteAttachment')
         response = requests.post(
             Storage.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,

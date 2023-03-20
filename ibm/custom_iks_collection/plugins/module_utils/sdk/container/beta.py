@@ -1,6 +1,6 @@
 # coding: utf-8
 
-# Copyright 2019 IBM All Rights Reserved.
+# Copyright 2022 IBM All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -56,7 +56,7 @@ class Beta:
             status = "ERROR. status_code mismatch"
         return status
    
-    # Method to get the list of worker nodes from cluster
+    # Method to disable private service endpoint
     def disablePrivateServiceEndpoint(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -70,7 +70,7 @@ class Beta:
         )
 
         if response.status_code == 200 or response.status_code == 204:
-            return False, True
+            return True, False
         elif response.status_code == 401:
             return True, False
         elif response.status_code == 404:
@@ -80,7 +80,7 @@ class Beta:
         else:
             return True, False
 
-     # Method to get the list of worker nodes from cluster
+     # Method to disable public service endpoint
     def disablePublicServiceEndpoint(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -104,7 +104,7 @@ class Beta:
         else:
             return True, False
 
-    # Method to get the list of worker nodes from cluster
+    # Method to enable private service endpoint
     def enablePrivateServiceEndpoint(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -128,7 +128,7 @@ class Beta:
         else:
             return True, False
 
-    # Method to get the list of worker nodes from cluster
+    # Method to enable public service endpoint
     def enablePublicServiceEndpoint(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -152,7 +152,7 @@ class Beta:
         else:
             return True, False
 
-    # Method to get the list of worker nodes from cluster
+    # Method to enable pullsecret
     def enablePullSecret(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -176,7 +176,7 @@ class Beta:
         else:
             return True, False
 
-    # Method to get the list of worker nodes from cluster
+    # Method to replace worker node in cluster
     def replaceWorker(self, data):
         headers = {
             "Authorization": data['iam_token'],
@@ -200,7 +200,7 @@ class Beta:
         else:
             return True, False
 
-    # Method to get the list of worker nodes from cluster
+    # Method to update master kube api version
     def updateMaster(self, data):
         headers = {
             "Authorization": data['iam_token'],
