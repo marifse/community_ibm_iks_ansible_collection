@@ -185,7 +185,7 @@ class Beta:
             "Authorization": data['iam_token'],
             "X-Auth-Resource-Group": data['resource_group_id']
             }
-        TARGET_URL = ('/v2/replaceWorker')
+        TARGET_URL = ('/v2/vpc/replaceWorker')
         response = requests.post(
             Beta.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
