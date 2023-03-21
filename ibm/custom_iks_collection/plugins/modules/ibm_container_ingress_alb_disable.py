@@ -204,7 +204,7 @@ def run_module():
         module.exit_json(
             changed=has_changed)
     else:
-        module.fail_json(msg="Error disabling ALB", meta=alb_info)
+        module.fail_json(msg="Error disabling ingress ALB", meta=alb_info)
 
 
 def main():

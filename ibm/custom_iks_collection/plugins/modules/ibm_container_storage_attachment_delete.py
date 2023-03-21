@@ -138,7 +138,7 @@ def run_module():
             changed=has_changed,
             storage_info=storage_info)
     else:
-        module.fail_json(msg="Error creating storage", meta=storage_info)
+        module.fail_json(msg="Error removing attachment", meta=storage_info)
 
 
 def main():

@@ -209,7 +209,7 @@ def run_module():
         module.exit_json(
             changed=has_changed)
     else:
-        module.fail_json(msg="Error creating monitoring", meta=info_nlb)
+        module.fail_json(msg="Error NLB Healt Monitor Info", meta=info_nlb)
 
 
 def main():

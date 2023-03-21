@@ -215,7 +215,7 @@ def run_module():
             changed=has_changed,
             new_config=alb_config )
     else:
-        module.fail_json(msg="Error creating monitoring", meta=alb_config)
+        module.fail_json(msg="Error NLB Health Monitor Config", meta=alb_config)
 
 
 def main():

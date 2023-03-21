@@ -155,7 +155,7 @@ def run_module():
             changed=has_changed,
             alb_info=alb_info)
     else:
-        module.fail_json(msg="Error creating ALB", meta=alb_info)
+        module.fail_json(msg="Error creating ingress ALB", meta=alb_info)
 
 
 def main():

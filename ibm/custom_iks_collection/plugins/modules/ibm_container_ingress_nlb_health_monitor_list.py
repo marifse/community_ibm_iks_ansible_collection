@@ -115,7 +115,7 @@ def run_module():
             changed=has_changed,
             new_config=alb_config )
     else:
-        module.fail_json(msg="Error creating monitoring")
+        module.fail_json(msg="Error Listing NLB Health Monitor")
 
 
 def main():

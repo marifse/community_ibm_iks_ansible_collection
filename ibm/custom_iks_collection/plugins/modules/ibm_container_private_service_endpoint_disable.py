@@ -108,7 +108,7 @@ def run_module():
             changed=has_changed,
             )
     else:
-        module.fail_json(msg="Error creating monitoring")
+        module.fail_json(msg="Error disabling private service endpoint")
 
 
 def main():

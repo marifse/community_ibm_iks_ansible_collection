@@ -204,7 +204,7 @@ def run_module():
         module.exit_json(
             changed=has_changed)
     else:
-        module.fail_json(msg="Error creating monitoring")
+        module.fail_json(msg="Error enabling ingress alb")
 
 
 def main():

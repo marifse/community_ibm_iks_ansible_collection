@@ -138,7 +138,7 @@ def run_module():
             changed=has_changed,
             monitoring_info=monitoring_info)
     else:
-        module.fail_json(msg="Error creating monitoring", meta=monitoring_info)
+        module.fail_json(msg="Error creating monitoring config", meta=monitoring_info)
 
 
 def main():
