@@ -36,7 +36,7 @@ options:
         description:
             - ID of the resource group that the cluster is in. To check the resource group ID of the cluster, use the GET /v1/clusters/idOrName API.
     
-    vpcVolumeRemoveConfig:
+    vpcVolumeAttachmentConfig:
         description:
             - command for the worker update
         required: True
@@ -66,7 +66,7 @@ EXAMPLES = r'''
 # Target the cluster which is present in default resource group
 - ibm_container_storage_attachment_delete:
     resource_group_id: "{{ name }}"
-    vpcVolumeRemoveConfig:
+    vpcVolumeAttachmentConfig:
         cluster: "Your Cluster ID"
         volumeAttachmentID : "Your Volume Attachment ID"
         worker: "Your Worker ID"
@@ -90,7 +90,7 @@ def run_module():
             required=True,
             type='str'
         ),
-        vpcVolumeRemoveConfig=dict(
+        vpcVolumeAttachmentConfig=dict(
             required=True,
             type='dict',
             options=dict(
@@ -115,8 +115,8 @@ def run_module():
         supports_check_mode=True
     )
 
-    cluster = module.params["vpcVolumeRemoveConfig"]["cluster"]
-    worker = module.params["vpcVolumeRemoveConfig"]["worker"]
+    cluster = module.params["vpcVolumeAttachmentConfig"]["cluster"]
+    worker = module.params["vpcVolumeAttachmentConfig"]["worker"]
     resource_group_id = module.params["resource_group_id"]
     ibmcloud_api_key = module.params["ibmcloud_api_key"]
 
