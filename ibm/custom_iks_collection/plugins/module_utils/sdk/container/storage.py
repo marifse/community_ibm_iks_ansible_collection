@@ -88,7 +88,7 @@ class Storage:
         response = requests.post(
             Storage.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['vpcVolumeAttachmentConfig']
+            json=data['vpcVolumeRemoveConfig']
         )
 
         if response.status_code == 200 or response.status_code == 204:

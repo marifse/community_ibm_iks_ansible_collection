@@ -6,6 +6,5 @@
     vpcVolumeAttachmentConfig:
         cluster: "{{cluster}}"
         volumeAttachmentID : "{{volumeAttachmentID}}"
-        volumeID: "{{ volumeID }}"
         worker: "{{ worker }}"
   register: cluster_info

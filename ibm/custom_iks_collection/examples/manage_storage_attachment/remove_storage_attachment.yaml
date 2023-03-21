@@ -32,5 +32,4 @@
       vars:
         cluster: "cf63ll6d0nq35030v0u0"
         volumeAttachmentID : "sadsa-dadsad-asds-ad-as"
-        volumeID: "r006-c73eeb4d-d0c7-443d-aa45-eb0efb239b43"
         worker: "kube-cf63ll6d0nq35030v0u0-myclusterus-default-00000138"

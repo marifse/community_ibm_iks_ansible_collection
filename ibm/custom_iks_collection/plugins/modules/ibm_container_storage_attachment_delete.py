@@ -36,7 +36,7 @@ options:
         description:
             - ID of the resource group that the cluster is in. To check the resource group ID of the cluster, use the GET /v1/clusters/idOrName API.
     
-    vpcVolumeAttachmentConfig:
+    vpcVolumeRemoveConfig:
         description:
             - command for the worker update
         required: True
@@ -53,13 +53,7 @@ options:
                     -   The Volume Attachment ID
                 required: True
                 type : str
-
-            volumeID:
-                description:
-                    -   The Volume ID which needs to be attached 
-                required: True
-                type : str
-
+          
             worker:
                 description:
                     -   The Worker ID of the Given Cluster 
@@ -72,10 +66,9 @@ EXAMPLES = r'''
 # Target the cluster which is present in default resource group
 - ibm_container_storage_attachment_delete:
     resource_group_id: "{{ name }}"
-    vpcVolumeAttachmentConfig:
+    vpcVolumeRemoveConfig:
         cluster: "Your Cluster ID"
         volumeAttachmentID : "Your Volume Attachment ID"
-        volumeID: "Your Volume ID"
         worker: "Your Worker ID"
 '''
 
@@ -97,7 +90,7 @@ def run_module():
             required=True,
             type='str'
         ),
-        vpcVolumeAttachmentConfig=dict(
+        vpcVolumeRemoveConfig=dict(
             required=True,
             type='dict',
             options=dict(
@@ -106,10 +99,6 @@ def run_module():
                     type='str'
                 ),
                 volumeAttachmentID=dict(
-                    required=True,
-                    type='str'
-                ),
-                volumeID=dict(
                     required=True,
                     type='str'
                 ),
@@ -126,8 +115,8 @@ def run_module():
         supports_check_mode=True
     )
 
-    cluster = module.params["vpcVolumeAttachmentConfig"]["cluster"]
-    worker = module.params["vpcVolumeAttachmentConfig"]["worker"]
+    cluster = module.params["vpcVolumeRemoveConfig"]["cluster"]
+    worker = module.params["vpcVolumeRemoveConfig"]["worker"]
     resource_group_id = module.params["resource_group_id"]
     ibmcloud_api_key = module.params["ibmcloud_api_key"]
 
