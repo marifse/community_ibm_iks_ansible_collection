@@ -4,17 +4,18 @@
 # (C) Copyright IBM Corp. 2022.
 # GNU General Public License v3.0+ (see LICENSE or https://www.gnu.org/licenses/gpl-3.0.txt)
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 
 
 ANSIBLE_METADATA = {
-    'metadata_version': '1.1',
-    'status': ['preview'],
-    'supported_by': 'community'
+    "metadata_version": "1.1",
+    "status": ["preview"],
+    "supported_by": "community",
 }
 
-DOCUMENTATION = r'''
+DOCUMENTATION = r"""
 ---
 module: ibm_container_image_security_disable
 author: arifnafees (@marifse)
@@ -47,17 +48,17 @@ options:
                     - The cluster id which needs to be monitored.
                 required: True
                 type: str
-'''
+"""
 
 
-EXAMPLES = r'''
+EXAMPLES = r"""
 # Target the cluster which is present in default resource group
 - ibm_container_image_security_disable:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
         cluster: "Your Cluster ID"
-'''
+"""
 
 from ..module_utils.auth import Authenticator
 from ..module_utils.sdk.container.imageSecurity import ImageSecret
@@ -69,30 +70,19 @@ def run_module():
     module_args = dict(
         ibmcloud_api_key=dict(
             required=True,
-            type='str',
+            type="str",
             no_log=True,
-            fallback=(env_fallback, ['IC_API_KEY'])
+            fallback=(env_fallback, ["IC_API_KEY"]),
         ),
-        resource_group_id=dict(
-            required=True,
-            type='str'
-        ),
+        resource_group_id=dict(required=True, type="str"),
         config=dict(
             required=True,
-            type='dict',
-            options=dict(
-                cluster=dict(
-                    required=True,
-                    type='str'
-                )
-            )
-        )
+            type="dict",
+            options=dict(cluster=dict(required=True, type="str")),
+        ),
     )
 
-    module = AnsibleModule(
-        argument_spec=module_args,
-        supports_check_mode=True
-    )
+    module = AnsibleModule(argument_spec=module_args, supports_check_mode=True)
 
     cluster = module.params["config"]["cluster"]
     ibmcloud_api_key = module.params["ibmcloud_api_key"]
@@ -111,8 +101,7 @@ def run_module():
     is_error, has_changed = sdk.disableImageSecurity(module.params)
 
     if not is_error:
-        module.exit_json(
-            changed=has_changed)
+        module.exit_json(changed=has_changed)
     else:
         module.fail_json(msg="Error disabling image security")
 
@@ -121,5 +110,5 @@ def main():
     run_module()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

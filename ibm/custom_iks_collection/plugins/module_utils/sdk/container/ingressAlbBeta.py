@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import traceback
 
@@ -25,18 +26,19 @@ except ImportError:
 else:
     HAS_ANOTHER_LIBRARY = True
 
+
 class IngressALBBeta:
     """IngressAlbBeta class to support following functionalities.
-        * update_alb
-        * create_alb
-        * disable_alb
-        * enable_alb
+    * update_alb
+    * create_alb
+    * disable_alb
+    * enable_alb
     """
 
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://containers.cloud.ibm.com/global/'
+    DEFAULT_SERVICE_URL = "https://containers.cloud.ibm.com/global/"
 
-     # The init method or constructor
+    # The init method or constructor
     def __init__(self, cluster_id):
 
         # Instance Variable
@@ -55,18 +57,18 @@ class IngressALBBeta:
         else:
             status = "ERROR. status_code mismatch"
         return status
-   
+
     # Method to update the ALB in the Cluster
     def updateAlb(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/alb/updateAlb')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/alb/updateAlb"
         response = requests.post(
             IngressALBBeta.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -83,14 +85,14 @@ class IngressALBBeta:
     # Method to create the ALB in the Cluster
     def createAlb(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/alb/vpc/createAlb')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/alb/vpc/createAlb"
         response = requests.post(
             IngressALBBeta.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 201:
@@ -107,14 +109,14 @@ class IngressALBBeta:
     # Method to disable the ALB in the Cluster
     def disableAlb(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/alb/vpc/disableAlb')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/alb/vpc/disableAlb"
         response = requests.post(
             IngressALBBeta.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -128,20 +130,24 @@ class IngressALBBeta:
         else:
             return True, False, response.json()
 
-     # Method to enable the ALB in the Cluster
+    # Method to enable the ALB in the Cluster
     def enableAlb(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/alb/vpc/enableAlb')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/alb/vpc/enableAlb"
         response = requests.post(
             IngressALBBeta.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
-        if response.status_code == 200 or response.status_code == 204 or response.status_code == 201:
+        if (
+            response.status_code == 200
+            or response.status_code == 204
+            or response.status_code == 201
+        ):
             return False, True
         elif response.status_code == 401:
             return True, False, response.json()
@@ -151,4 +157,3 @@ class IngressALBBeta:
             return True, False, response.json()
         else:
             return True, False, response.json()
-

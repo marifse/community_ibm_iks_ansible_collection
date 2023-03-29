@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import os
 import json
@@ -34,54 +35,58 @@ class Authenticator:
     """
     Use this class to generate IAM TOKEN from API KEY
     """
+
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://iam.cloud.ibm.com/identity/token'
+    DEFAULT_SERVICE_URL = "https://iam.cloud.ibm.com/identity/token"
 
     # The init method or constructor
     def __init__(self, api_key):
 
         # Instance Variable
         self.api_key = api_key
-        if api_key == '':
-            api_key = os.getenv('IC_API_KEY')
+        if api_key == "":
+            api_key = os.getenv("IC_API_KEY")
             self.api_key = api_key
 
     # get_iam_token use to fetch IAM TOKEN using API KEY
     def get_iam_token(self):
 
         headers = {
-            'Authorization': 'Basic Yng6Yng=',
-            'Content-Type': 'application/x-www-form-urlencoded',
+            "Authorization": "Basic Yng6Yng=",
+            "Content-Type": "application/x-www-form-urlencoded",
         }
 
-        data = "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey="+self.api_key+"&uaa_client_id=cf&uaa_client_secret="
+        data = (
+            "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey="
+            + self.api_key
+            + "&uaa_client_id=cf&uaa_client_secret="
+        )
         # data = 'grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey='+self.api_key
 
         response = requests.post(
-            Authenticator.DEFAULT_SERVICE_URL,
-            headers=headers,
-            data=data
+            Authenticator.DEFAULT_SERVICE_URL, headers=headers, data=data
         )
         dataJson = json.loads(response.content)
         bearerToken = "Bearer " + dataJson["access_token"]
         return bearerToken
-    
-    
+
     # get_iam_token use to fetch IAM TOKEN using API KEY
     def get_refresh_token(self):
 
         headers = {
-            'Authorization': 'Basic Yng6Yng=',
-            'Content-Type': 'application/x-www-form-urlencoded',
+            "Authorization": "Basic Yng6Yng=",
+            "Content-Type": "application/x-www-form-urlencoded",
         }
 
-        data = "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey="+self.api_key+"&uaa_client_id=cf&uaa_client_secret="
+        data = (
+            "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey="
+            + self.api_key
+            + "&uaa_client_id=cf&uaa_client_secret="
+        )
         # data = 'grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey='+self.api_key
 
         response = requests.post(
-            Authenticator.DEFAULT_SERVICE_URL,
-            headers=headers,
-            data=data
+            Authenticator.DEFAULT_SERVICE_URL, headers=headers, data=data
         )
         dataJson = json.loads(response.content)
         return dataJson["refresh_token"]

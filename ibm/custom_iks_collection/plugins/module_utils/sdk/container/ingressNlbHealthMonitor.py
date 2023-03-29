@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import traceback
 
@@ -25,18 +26,19 @@ except ImportError:
 else:
     HAS_ANOTHER_LIBRARY = True
 
+
 class IngressNlbHealthMonitor:
     """IngressNLBHealthMonitor class to support following functionalities.
-        * enableDisable_health_check_monitor_alb
-        * configure_health_check_monitor_alb
-        * view_health_check_monitor_alb
-        * list_health_check_monitor_alb
+    * enableDisable_health_check_monitor_alb
+    * configure_health_check_monitor_alb
+    * view_health_check_monitor_alb
+    * list_health_check_monitor_alb
     """
 
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://containers.cloud.ibm.com/global/'
+    DEFAULT_SERVICE_URL = "https://containers.cloud.ibm.com/global/"
 
-     # The init method or constructor
+    # The init method or constructor
     def __init__(self, cluster_id):
 
         # Instance Variable
@@ -55,18 +57,18 @@ class IngressNlbHealthMonitor:
         else:
             status = "ERROR. status_code mismatch"
         return status
-   
+
     # Method to update the ALB Health Check Monitor in the Cluster
     def enableDisableHealthCheckMonitorALB(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v1/nlb-dns/clusters/'+ data['config']['idOrName'] +'/health')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v1/nlb-dns/clusters/" + data["config"]["idOrName"] + "/health"
         response = requests.put(
             IngressNlbHealthMonitor.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -80,17 +82,19 @@ class IngressNlbHealthMonitor:
         else:
             return True, False, response.json()
 
-     # Method to update the ALB Health Check Monitor in the Cluster
+    # Method to update the ALB Health Check Monitor in the Cluster
     def configureHealthCheckMonitorALB(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v1/nlb-dns/health/clusters/'+ data['config']['idOrName'] +'/config')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = (
+            "/v1/nlb-dns/health/clusters/" + data["config"]["idOrName"] + "/config"
+        )
         response = requests.patch(
             IngressNlbHealthMonitor.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -107,13 +111,18 @@ class IngressNlbHealthMonitor:
     # Method to view the ALB Health Check Monitor in the Cluster
     def viewHealthCheckMonitorALB(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v1/nlb-dns/health/clusters/'+ data['config']['idOrName'] +'/host/'+ data['config']['nlbHost'] + '/config')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = (
+            "/v1/nlb-dns/health/clusters/"
+            + data["config"]["idOrName"]
+            + "/host/"
+            + data["config"]["nlbHost"]
+            + "/config"
+        )
         response = requests.get(
-            IngressNlbHealthMonitor.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers
+            IngressNlbHealthMonitor.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -126,17 +135,18 @@ class IngressNlbHealthMonitor:
             return True, False, response.json()
         else:
             return True, False, response.json()
-    
+
     # Method to list the ALB Health Check Monitor in the Cluster
     def listHealthCheckMonitorALB(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v1/nlb-dns/health/clusters/'+ data['config']['idOrName'] +'/list')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = (
+            "/v1/nlb-dns/health/clusters/" + data["config"]["idOrName"] + "/list"
+        )
         response = requests.get(
-            IngressNlbHealthMonitor.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers
+            IngressNlbHealthMonitor.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers
         )
 
         if response.status_code == 200 or response.status_code == 204:

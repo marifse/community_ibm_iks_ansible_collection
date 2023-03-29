@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import traceback
 
@@ -25,16 +26,17 @@ except ImportError:
 else:
     HAS_ANOTHER_LIBRARY = True
 
+
 class Ingress:
     """Ingress Network class to support following functionalities.
-        * delete_secret
-        * regenerate_certificate
+    * delete_secret
+    * regenerate_certificate
     """
 
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://containers.cloud.ibm.com/global/'
+    DEFAULT_SERVICE_URL = "https://containers.cloud.ibm.com/global/"
 
-     # The init method or constructor
+    # The init method or constructor
     def __init__(self, cluster_id):
 
         # Instance Variable
@@ -53,17 +55,17 @@ class Ingress:
         else:
             status = "ERROR. status_code mismatch"
         return status
-   
+
     # Method to delete secret
     def deleteSecret(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            }
-        TARGET_URL = ('/v2/nlb-dns/deleteSecret')
+            "Authorization": data["iam_token"],
+        }
+        TARGET_URL = "/v2/nlb-dns/deleteSecret"
         response = requests.post(
             Ingress.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -77,19 +79,23 @@ class Ingress:
         else:
             return True, False
 
-     # Method to regenerate certificate
+    # Method to regenerate certificate
     def regenerateCert(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            }
-        TARGET_URL = ('/v2/nlb-dns/regenerateCert')
+            "Authorization": data["iam_token"],
+        }
+        TARGET_URL = "/v2/nlb-dns/regenerateCert"
         response = requests.post(
             Ingress.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
-        if response.status_code == 200 or response.status_code == 204 or response.status_code == 202:
+        if (
+            response.status_code == 200
+            or response.status_code == 204
+            or response.status_code == 202
+        ):
             return False, True
         elif response.status_code == 401:
             return True, False

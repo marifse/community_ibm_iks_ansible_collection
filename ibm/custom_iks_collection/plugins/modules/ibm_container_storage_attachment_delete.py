@@ -4,17 +4,18 @@
 # (C) Copyright IBM Corp. 2022.
 # GNU General Public License v3.0+ (see LICENSE or https://www.gnu.org/licenses/gpl-3.0.txt)
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 
 
 ANSIBLE_METADATA = {
-    'metadata_version': '1.1',
-    'status': ['preview'],
-    'supported_by': 'community'
+    "metadata_version": "1.1",
+    "status": ["preview"],
+    "supported_by": "community",
 }
 
-DOCUMENTATION = r'''
+DOCUMENTATION = r"""
 ---
 module: ibm_container_storage_attachment_delete
 author: arifnafees (@marifse)
@@ -59,10 +60,10 @@ options:
                     -   The Worker ID of the Given Cluster 
                 required: True
                 type : str
-'''
+"""
 
 
-EXAMPLES = r'''
+EXAMPLES = r"""
 # Target the cluster which is present in default resource group
 - ibm_container_storage_attachment_delete:
     resource_group_id: "{{ name }}"
@@ -70,7 +71,7 @@ EXAMPLES = r'''
         cluster: "Your Cluster ID"
         volumeAttachmentID : "Your Volume Attachment ID"
         worker: "Your Worker ID"
-'''
+"""
 
 from ..module_utils.auth import Authenticator
 from ..module_utils.sdk.container.storage import Storage
@@ -82,38 +83,23 @@ def run_module():
     module_args = dict(
         ibmcloud_api_key=dict(
             required=True,
-            type='str',
+            type="str",
             no_log=True,
-            fallback=(env_fallback, ['IC_API_KEY'])
+            fallback=(env_fallback, ["IC_API_KEY"]),
         ),
-        resource_group_id=dict(
-            required=True,
-            type='str'
-        ),
+        resource_group_id=dict(required=True, type="str"),
         vpcVolumeAttachmentConfig=dict(
             required=True,
-            type='dict',
+            type="dict",
             options=dict(
-                cluster=dict(
-                    required=True,
-                    type='str'
-                ),
-                volumeAttachmentID=dict(
-                    required=True,
-                    type='str'
-                ),
-                worker=dict(
-                    required=True,
-                    type='str'
-                )
-            )
-        )
+                cluster=dict(required=True, type="str"),
+                volumeAttachmentID=dict(required=True, type="str"),
+                worker=dict(required=True, type="str"),
+            ),
+        ),
     )
 
-    module = AnsibleModule(
-        argument_spec=module_args,
-        supports_check_mode=True
-    )
+    module = AnsibleModule(argument_spec=module_args, supports_check_mode=True)
 
     cluster = module.params["vpcVolumeAttachmentConfig"]["cluster"]
     worker = module.params["vpcVolumeAttachmentConfig"]["worker"]
@@ -134,9 +120,7 @@ def run_module():
     is_error, has_changed, storage_info = sdk.delete_storage_attachment(module.params)
 
     if not is_error:
-        module.exit_json(
-            changed=has_changed,
-            storage_info=storage_info)
+        module.exit_json(changed=has_changed, storage_info=storage_info)
     else:
         module.fail_json(msg="Error removing attachment", meta=storage_info)
 
@@ -145,5 +129,5 @@ def main():
     run_module()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

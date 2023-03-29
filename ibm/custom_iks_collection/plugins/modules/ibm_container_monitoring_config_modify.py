@@ -4,17 +4,18 @@
 # (C) Copyright IBM Corp. 2022.
 # GNU General Public License v3.0+ (see LICENSE or https://www.gnu.org/licenses/gpl-3.0.txt)
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 
 
 ANSIBLE_METADATA = {
-    'metadata_version': '1.1',
-    'status': ['preview'],
-    'supported_by': 'community'
+    "metadata_version": "1.1",
+    "status": ["preview"],
+    "supported_by": "community",
 }
 
-DOCUMENTATION = r'''
+DOCUMENTATION = r"""
 ---
 module: ibm_container_monitoring_config_modify
 author: arifnafees (@marifse)
@@ -65,10 +66,10 @@ options:
                     -    The privateEndpoint of the Sysdig Monitoring - IBM Cloud Monitoring
                 required: False
                 type : bool
-'''
+"""
 
 
-EXAMPLES = r'''
+EXAMPLES = r"""
 # Target the cluster which is present in default resource group
 - ibm_container_monitoring_config_modify:
     ibmcloud_api_key: "{{ name }}"
@@ -78,7 +79,7 @@ EXAMPLES = r'''
         instance: "Your Instance ID"
         privateEndpoint: "Your Private Endpoint ID"
         newInstance: "Your New Instance ID"
-'''
+"""
 
 from ..module_utils.auth import Authenticator
 from ..module_utils.sdk.container.monitoring import Monitoring
@@ -90,42 +91,24 @@ def run_module():
     module_args = dict(
         ibmcloud_api_key=dict(
             required=True,
-            type='str',
+            type="str",
             no_log=True,
-            fallback=(env_fallback, ['IC_API_KEY'])
+            fallback=(env_fallback, ["IC_API_KEY"]),
         ),
         config=dict(
             required=True,
-            type='dict',
+            type="dict",
             options=dict(
-                cluster=dict(
-                    required=True,
-                    type='str'
-                ),
-                ingestionKey=dict(
-                    required=False,
-                    type='str'
-                ),
-                privateEndpoint=dict(
-                    required=False,
-                    type='bool'
-                ),
-                instance=dict(
-                    required=True,
-                    type='str'
-                ),
-                newInstance=dict(
-                    required=True,
-                    type='str'
-                )
-            )
-        )
+                cluster=dict(required=True, type="str"),
+                ingestionKey=dict(required=False, type="str"),
+                privateEndpoint=dict(required=False, type="bool"),
+                instance=dict(required=True, type="str"),
+                newInstance=dict(required=True, type="str"),
+            ),
+        ),
     )
 
-    module = AnsibleModule(
-        argument_spec=module_args,
-        supports_check_mode=True
-    )
+    module = AnsibleModule(argument_spec=module_args, supports_check_mode=True)
 
     cluster = module.params["config"]["cluster"]
     ibmcloud_api_key = module.params["ibmcloud_api_key"]
@@ -141,14 +124,11 @@ def run_module():
     module.params["iam_token"] = authenticator.get_iam_token()
     module.params["refresh_token"] = authenticator.get_refresh_token()
 
-
     # List baisc info a cluster.
     is_error, has_changed, monitoring_info = sdk.modify_config_monitoring(module.params)
 
     if not is_error:
-        module.exit_json(
-            changed=has_changed,
-            monitoring_info=monitoring_info)
+        module.exit_json(changed=has_changed, monitoring_info=monitoring_info)
     else:
         module.fail_json(msg="Error modifying monitoring config", meta=monitoring_info)
 
@@ -157,5 +137,5 @@ def main():
     run_module()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

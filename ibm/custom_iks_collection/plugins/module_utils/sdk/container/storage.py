@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import traceback
 
@@ -25,21 +26,22 @@ except ImportError:
 else:
     HAS_ANOTHER_LIBRARY = True
 
+
 class Storage:
     """Storage class to support following functionalities.
-        * create_storage_attachment
-        * delete_storage_attachment
+    * create_storage_attachment
+    * delete_storage_attachment
     """
 
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://containers.cloud.ibm.com/global/'
+    DEFAULT_SERVICE_URL = "https://containers.cloud.ibm.com/global/"
 
-     # The init method or constructor
+    # The init method or constructor
     def __init__(self, cluster_id):
 
         # Instance Variable
         self.cluster_id = cluster_id
-    
+
     # Method to fetch error code based on status code
     def get_status(self, status_code):
         if status_code == 200 or status_code == 204:
@@ -57,14 +59,14 @@ class Storage:
     # Method to attach storage volume to worker node in cluster
     def create_storage_attachment(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/storage/createAttachment')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/storage/createAttachment"
         response = requests.post(
             Storage.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['vpcVolumeAttachmentConfig']
+            json=data["vpcVolumeAttachmentConfig"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -81,14 +83,14 @@ class Storage:
     # Method to delete storage attachment from worker node in cluster
     def delete_storage_attachment(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/storage/deleteAttachment')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/storage/deleteAttachment"
         response = requests.post(
             Storage.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['vpcVolumeAttachmentConfig']
+            json=data["vpcVolumeAttachmentConfig"],
         )
 
         if response.status_code == 200 or response.status_code == 204:

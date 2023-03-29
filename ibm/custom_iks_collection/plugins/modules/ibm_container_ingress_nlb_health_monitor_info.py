@@ -4,17 +4,18 @@
 # (C) Copyright IBM Corp. 2022.
 # GNU General Public License v3.0+ (see LICENSE or https://www.gnu.org/licenses/gpl-3.0.txt)
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 
 
 ANSIBLE_METADATA = {
-    'metadata_version': '1.1',
-    'status': ['preview'],
-    'supported_by': 'community'
+    "metadata_version": "1.1",
+    "status": ["preview"],
+    "supported_by": "community",
 }
 
-DOCUMENTATION = r'''
+DOCUMENTATION = r"""
 ---
 module: ibm_container_ingress_nlb_health_monitor_info
 author: arifnafees (@marifse)
@@ -97,10 +98,10 @@ options:
                     - The cluster id which needs to be monitored.
                 required: True
                 type: str
-'''
+"""
 
 
-EXAMPLES = r'''
+EXAMPLES = r"""
 # Target the cluster which is present in default resource group
 - ibm_container_ingress_nlb_health_monitor_info:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
@@ -116,7 +117,7 @@ EXAMPLES = r'''
         nlbStatusMessage: ""
         nlbType:""
         secretNamespace: ""
-'''
+"""
 
 from ..module_utils.auth import Authenticator
 from ..module_utils.sdk.container.ingressNlbHealthMonitor import IngressNlbHealthMonitor
@@ -128,66 +129,30 @@ def run_module():
     module_args = dict(
         ibmcloud_api_key=dict(
             required=True,
-            type='str',
+            type="str",
             no_log=True,
-            fallback=(env_fallback, ['IC_API_KEY'])
+            fallback=(env_fallback, ["IC_API_KEY"]),
         ),
-        resource_group_id=dict(
-            required=True,
-            type='str'
-        ),
+        resource_group_id=dict(required=True, type="str"),
         config=dict(
             required=True,
-            type='dict',
+            type="dict",
             options=dict(
-                clusterID=dict(
-                    required=True,
-                    type='str'
-                ),
-                idOrName=dict(
-                    required=True,
-                    type='str'
-                ),
-                nlbIPArray=dict(
-                    required=True,
-                    type='list'
-                ),
-                nlbDnsType=dict(
-                    required=True,
-                    type='str'
-                ),
-                nlbHost=dict(
-                    required=True,
-                    type='str'
-                ),
-                nlbMonitorState=dict(
-                    required=True,
-                    type='str'
-                ),
-                nlbSslSecretName=dict(
-                    required=True,
-                    type='str'
-                ),
-                nlbStatusMessage=dict(
-                    required=True,
-                    type='str'
-                ),
-                nlbType=dict(
-                    required=True,
-                    type='str'
-                ),
-                secretNamespace=dict(
-                    required=True,
-                    type='str'
-                )
-            )
-        )
+                clusterID=dict(required=True, type="str"),
+                idOrName=dict(required=True, type="str"),
+                nlbIPArray=dict(required=True, type="list"),
+                nlbDnsType=dict(required=True, type="str"),
+                nlbHost=dict(required=True, type="str"),
+                nlbMonitorState=dict(required=True, type="str"),
+                nlbSslSecretName=dict(required=True, type="str"),
+                nlbStatusMessage=dict(required=True, type="str"),
+                nlbType=dict(required=True, type="str"),
+                secretNamespace=dict(required=True, type="str"),
+            ),
+        ),
     )
 
-    module = AnsibleModule(
-        argument_spec=module_args,
-        supports_check_mode=True
-    )
+    module = AnsibleModule(argument_spec=module_args, supports_check_mode=True)
 
     cluster = module.params["config"]["clusterID"]
     ibmcloud_api_key = module.params["ibmcloud_api_key"]
@@ -203,11 +168,12 @@ def run_module():
     module.params["iam_token"] = authenticator.get_iam_token()
 
     # List baisc info a cluster.
-    is_error, has_changed, info_nlb = sdk.enableDisableHealthCheckMonitorALB(module.params)
+    is_error, has_changed, info_nlb = sdk.enableDisableHealthCheckMonitorALB(
+        module.params
+    )
 
     if not is_error:
-        module.exit_json(
-            changed=has_changed)
+        module.exit_json(changed=has_changed)
     else:
         module.fail_json(msg="Error NLB Healt Monitor Info", meta=info_nlb)
 
@@ -216,5 +182,5 @@ def main():
     run_module()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

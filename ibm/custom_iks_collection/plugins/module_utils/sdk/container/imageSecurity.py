@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import traceback
 
@@ -25,16 +26,17 @@ except ImportError:
 else:
     HAS_ANOTHER_LIBRARY = True
 
+
 class ImageSecret:
     """ImageSecurity class to support following functionalities.
-        * disable_image_security
-        * enable_image_security
+    * disable_image_security
+    * enable_image_security
     """
 
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://containers.cloud.ibm.com/global/'
+    DEFAULT_SERVICE_URL = "https://containers.cloud.ibm.com/global/"
 
-     # The init method or constructor
+    # The init method or constructor
     def __init__(self, cluster_id):
 
         # Instance Variable
@@ -53,18 +55,18 @@ class ImageSecret:
         else:
             status = "ERROR. status_code mismatch"
         return status
-   
+
     # Method to disable image security in iks
     def disableImageSecurity(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/disableImageSecurity')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/disableImageSecurity"
         response = requests.post(
             ImageSecret.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -78,17 +80,17 @@ class ImageSecret:
         else:
             return True, False
 
-     # Method to enable image security in iks
+    # Method to enable image security in iks
     def enableImageSecurity(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/enableImageSecurity')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/enableImageSecurity"
         response = requests.post(
             ImageSecret.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -101,4 +103,3 @@ class ImageSecret:
             return True, False
         else:
             return True, False
-

@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import traceback
 import os
@@ -27,18 +28,19 @@ except ImportError:
 else:
     HAS_ANOTHER_LIBRARY = True
 
+
 class Monitoring:
     """Monitoring class to support following functionalities.
-        * create_config_monitoring
-        * remove_config_monitoring
-        * update_config_monitoring
-        * discover_config_monitoring
+    * create_config_monitoring
+    * remove_config_monitoring
+    * update_config_monitoring
+    * discover_config_monitoring
     """
 
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://containers.cloud.ibm.com/global/'
+    DEFAULT_SERVICE_URL = "https://containers.cloud.ibm.com/global/"
 
-     # The init method or constructor
+    # The init method or constructor
     def __init__(self, cluster_id):
 
         # Instance Variable
@@ -57,18 +59,18 @@ class Monitoring:
         else:
             status = "ERROR. status_code mismatch"
         return status
-   
+
     # Method to get the list of worker nodes from cluster
     def create_config_monitoring(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Refresh-Token": data['refresh_token'],
-            }
-        TARGET_URL = ('/v2/observe/monitoring/createConfig')
+            "Authorization": data["iam_token"],
+            "X-Auth-Refresh-Token": data["refresh_token"],
+        }
+        TARGET_URL = "/v2/observe/monitoring/createConfig"
         response = requests.post(
             Monitoring.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -85,14 +87,14 @@ class Monitoring:
     # Method to get the list of worker nodes from cluster
     def discover_config_monitoring(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Refresh-Token": data['refresh_token'],
-            }
-        TARGET_URL = ('/v2/observe/monitoring/discoverAgent')
+            "Authorization": data["iam_token"],
+            "X-Auth-Refresh-Token": data["refresh_token"],
+        }
+        TARGET_URL = "/v2/observe/monitoring/discoverAgent"
         response = requests.post(
             Monitoring.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -109,14 +111,14 @@ class Monitoring:
     # Method to get the list of worker nodes from cluster
     def modify_config_monitoring(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Refresh-Token": data['refresh_token'],
-            }
-        TARGET_URL = ('/v2/observe/monitoring/modifyConfig')
+            "Authorization": data["iam_token"],
+            "X-Auth-Refresh-Token": data["refresh_token"],
+        }
+        TARGET_URL = "/v2/observe/monitoring/modifyConfig"
         response = requests.post(
             Monitoring.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -133,14 +135,14 @@ class Monitoring:
     # Method to get the list of worker nodes from cluster
     def remove_config_monitoring(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Refresh-Token": data['refresh_token'],
-            }
-        TARGET_URL = ('/v2/observe/monitoring/removeConfig')
+            "Authorization": data["iam_token"],
+            "X-Auth-Refresh-Token": data["refresh_token"],
+        }
+        TARGET_URL = "/v2/observe/monitoring/removeConfig"
         response = requests.post(
             Monitoring.DEFAULT_SERVICE_URL + TARGET_URL,
             headers=headers,
-            json=data['config']
+            json=data["config"],
         )
 
         if response.status_code == 200 or response.status_code == 204:

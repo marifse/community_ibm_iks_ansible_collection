@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 import traceback
 
@@ -25,21 +26,22 @@ except ImportError:
 else:
     HAS_ANOTHER_LIBRARY = True
 
+
 class Beta:
     """Beta class to support following functionalities.
-        * disable_private_service_endpoint
-        * disable_public_service_endpoint
-        * enable_private_service_endpoint
-        * enable_public_service_endpoint
-	* enable_pull_secret
-        * replace_worker
-	* update_master
+    * disable_private_service_endpoint
+    * disable_public_service_endpoint
+    * enable_private_service_endpoint
+    * enable_public_service_endpoint
+    * enable_pull_secret
+    * replace_worker
+    * update_master
     """
 
     # Class Variable
-    DEFAULT_SERVICE_URL = 'https://containers.cloud.ibm.com/global/'
+    DEFAULT_SERVICE_URL = "https://containers.cloud.ibm.com/global/"
 
-     # The init method or constructor
+    # The init method or constructor
     def __init__(self, cluster_id):
 
         # Instance Variable
@@ -58,18 +60,16 @@ class Beta:
         else:
             status = "ERROR. status_code mismatch"
         return status
-   
+
     # Method to disable private service endpoint
     def disablePrivateServiceEndpoint(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/disablePrivateServiceEndpoint')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/disablePrivateServiceEndpoint"
         response = requests.post(
-            Beta.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers,
-            json=data['config']
+            Beta.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers, json=data["config"]
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -83,17 +83,15 @@ class Beta:
         else:
             return True, False
 
-     # Method to disable public service endpoint
+    # Method to disable public service endpoint
     def disablePublicServiceEndpoint(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/disablePublicServiceEndpoint')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/disablePublicServiceEndpoint"
         response = requests.post(
-            Beta.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers,
-            json=data['config']
+            Beta.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers, json=data["config"]
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -110,14 +108,12 @@ class Beta:
     # Method to enable private service endpoint
     def enablePrivateServiceEndpoint(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/enablePrivateServiceEndpoint')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/enablePrivateServiceEndpoint"
         response = requests.post(
-            Beta.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers,
-            json=data['config']
+            Beta.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers, json=data["config"]
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -134,14 +130,12 @@ class Beta:
     # Method to enable public service endpoint
     def enablePublicServiceEndpoint(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/enablePublicServiceEndpoint')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/enablePublicServiceEndpoint"
         response = requests.post(
-            Beta.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers,
-            json=data['config']
+            Beta.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers, json=data["config"]
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -158,14 +152,12 @@ class Beta:
     # Method to enable pullsecret
     def enablePullSecret(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/enablePullSecret')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/enablePullSecret"
         response = requests.post(
-            Beta.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers,
-            json=data['config']
+            Beta.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers, json=data["config"]
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -182,14 +174,12 @@ class Beta:
     # Method to replace worker node in cluster
     def replaceWorker(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/vpc/replaceWorker')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/vpc/replaceWorker"
         response = requests.post(
-            Beta.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers,
-            json=data['config']
+            Beta.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers, json=data["config"]
         )
 
         if response.status_code == 200 or response.status_code == 204:
@@ -206,14 +196,12 @@ class Beta:
     # Method to update master kube api version
     def updateMaster(self, data):
         headers = {
-            "Authorization": data['iam_token'],
-            "X-Auth-Resource-Group": data['resource_group_id']
-            }
-        TARGET_URL = ('/v2/updateMaster')
+            "Authorization": data["iam_token"],
+            "X-Auth-Resource-Group": data["resource_group_id"],
+        }
+        TARGET_URL = "/v2/updateMaster"
         response = requests.post(
-            Beta.DEFAULT_SERVICE_URL + TARGET_URL,
-            headers=headers,
-            json=data['config']
+            Beta.DEFAULT_SERVICE_URL + TARGET_URL, headers=headers, json=data["config"]
         )
 
         if response.status_code == 200 or response.status_code == 204:
