@@ -39,7 +39,7 @@ options:
 
     config:
         description:
-            - Configuration 
+            - Configuration
         required: True
         type: dict
         suboptions:

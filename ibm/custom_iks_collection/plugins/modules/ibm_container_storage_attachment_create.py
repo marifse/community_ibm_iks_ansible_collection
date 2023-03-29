@@ -36,7 +36,7 @@ options:
         type: str
         description:
             - ID of the resource group that the cluster is in. To check the resource group ID of the cluster, use the GET /v1/clusters/idOrName API.
-    
+
     vpcVolumeAttachmentConfig:
         description:
             - command for the worker update
@@ -57,13 +57,13 @@ options:
 
             volumeID:
                 description:
-                    -   The Volume ID which needs to be attached 
+                    -   The Volume ID which needs to be attached
                 required: True
                 type : str
 
             worker:
                 description:
-                    -   The Worker ID of the Given Cluster 
+                    -   The Worker ID of the Given Cluster
                 required: True
                 type : str
 """
