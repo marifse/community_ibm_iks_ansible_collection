@@ -31,6 +31,6 @@
     - role: ../../../roles/storage-attachment/create
       vars:
         cluster: "cfvthuod08rknk0lcncg"
-        volumeAttachmentID : "sadsa-dadsad-asds-ad-as"
+        volumeAttachmentID: "sadsa-dadsad-asds-ad-as"
         volumeID: "r006-c73eeb4d-d0c7-443d-aa45-eb0efb239b43-343434"
         worker: "kube-cf63ll6d0nq35030v0u0-myclusterus-default-00000138"

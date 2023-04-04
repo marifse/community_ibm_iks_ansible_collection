@@ -68,17 +68,13 @@ options:
                     - The cluster id which needs to be monitored.
                 required: True
                 type: list
+                elements: str
             nlbMonitorState:
                 description:
                     - The cluster id which needs to be monitored.
                 required: True
                 type: str
             nlbSslSecretName:
-                description:
-                    - The cluster id which needs to be monitored.
-                required: True
-                type: str
-            nlbSslSecretStatus:
                 description:
                     - The cluster id which needs to be monitored.
                 required: True
@@ -111,11 +107,11 @@ EXAMPLES = r"""
         idOrName: "Your Cluster ID or Name"
         nlbDnsType: "ALB List"
         nlbHost: "NLB Host"
-        nlbIPArray: ["IP Address"]
+        nlbIPArray: "IP Address"
         nlbMonitorState: "Monitor State"
         nlbSslSecretName: ""
         nlbStatusMessage: ""
-        nlbType:""
+        nlbType: ""
         secretNamespace: ""
 """
 
@@ -140,14 +136,14 @@ def run_module():
             options=dict(
                 clusterID=dict(required=True, type="str"),
                 idOrName=dict(required=True, type="str"),
-                nlbIPArray=dict(required=True, type="list"),
+                nlbIPArray=dict(required=True, type="list", elements="str"),
                 nlbDnsType=dict(required=True, type="str"),
                 nlbHost=dict(required=True, type="str"),
                 nlbMonitorState=dict(required=True, type="str"),
-                nlbSslSecretName=dict(required=True, type="str"),
+                nlbSslSecretName=dict(required=True, type="str", no_log=True),
                 nlbStatusMessage=dict(required=True, type="str"),
                 nlbType=dict(required=True, type="str"),
-                secretNamespace=dict(required=True, type="str"),
+                secretNamespace=dict(required=True, type="str", no_log=True),
             ),
         ),
     )

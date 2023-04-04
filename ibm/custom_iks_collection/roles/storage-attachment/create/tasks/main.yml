@@ -5,7 +5,7 @@
     resource_group_id: "{{ resource_group_id }}"
     vpcVolumeAttachmentConfig:
         cluster: "{{cluster}}"
-        volumeAttachmentID : "{{volumeAttachmentID}}"
+        volumeAttachmentID: "{{volumeAttachmentID}}"
         volumeID: "{{ volumeID }}"
         worker: "{{ worker }}"
   register: cluster_info

@@ -48,25 +48,75 @@ options:
                     - The cluster id which needs to be monitored.
                 required: True
                 type: str
-            enableByDefault:
+            enable:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: bool
+            albBuild:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: str
+            albID:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: True
+                type: str
+            albType:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: str
+            authBuild:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: str
+            createdDate:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: str
+            disableDeployment:
                 description:
                     - The cluster id which needs to be monitored.
                 required: True
                 type: bool
-            ingressImage:
+            loadBalancerHostname:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
-            type:
+            name:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
+                type: str
+            numOfInstances:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: str
+            resize:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: bool
+            state:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
+                type: str
+            status:
+                description:
+                    - The cluster id which needs to be monitored.
+                required: False
                 type: str
             zone:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
 """
 

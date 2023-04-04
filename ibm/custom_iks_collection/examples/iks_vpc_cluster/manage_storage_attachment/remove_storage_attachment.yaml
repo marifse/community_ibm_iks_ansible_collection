@@ -31,5 +31,5 @@
     - role: ../../../roles/storage-attachment/delete
       vars:
         cluster: "cf63ll6d0nq35030v0u0"
-        volumeAttachmentID : "sadsa-dadsad-asds-ad-as"
+        volumeAttachmentID: "sadsa-dadsad-asds-ad-as"
         worker: "kube-cf63ll6d0nq35030v0u0-myclusterus-default-00000138"

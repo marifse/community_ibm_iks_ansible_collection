@@ -58,6 +58,7 @@ options:
                     - The cluster id which needs to be monitored.
                 required: True
                 type: list
+                elements: str
 """
 
 
@@ -93,7 +94,7 @@ def run_module():
             options=dict(
                 cluster=dict(required=True, type="str"),
                 albBuild=dict(required=True, type="str"),
-                albList=dict(required=True, type="list"),
+                albList=dict(required=True, type="list", elements="str"),
             ),
         ),
     )

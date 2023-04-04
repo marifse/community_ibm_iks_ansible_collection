@@ -30,6 +30,11 @@ options:
         type: str
         description:
             - The IBM Cloud API Key.
+    resource_group_id:
+        required: True
+        type: str
+        description:
+            - The Resource Group ID.
 
     config:
         description:

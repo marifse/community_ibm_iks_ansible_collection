@@ -3,4 +3,4 @@
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     config:
         cluster: "{{ cluster }}"
-        subdomain : "{{ subDomain }}"
+        subdomain: "{{ subDomain }}"

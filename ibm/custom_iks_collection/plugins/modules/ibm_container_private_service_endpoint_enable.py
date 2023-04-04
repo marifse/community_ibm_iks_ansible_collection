@@ -55,7 +55,7 @@ EXAMPLES = r"""
 # Target the cluster which is present in default resource group
 - ibm_container_private_service_endpoint_enable:
     ibmcloud_api_key: "{{ name }}"
-    resource_group_id: "{{ resource_group_id}}
+    resource_group_id: "{{ resource_group_id}}"
     config:
         cluster: "Your Cluster ID"
 """

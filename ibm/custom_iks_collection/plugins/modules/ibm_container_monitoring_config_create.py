@@ -23,7 +23,7 @@ version_added: "1.0.0"
 short_description: Create Config for SysDig Monitoring
 requirements: []
 description:
-    - Create a monitoring configuration for your IBM Cloud Kubernetes Service cluster to automatically collect cluster and pod metrics, and send these metrics to your IBM Cloud Monitoring with Sysdig service instance.
+    - Create a monitoring configuration for your IBM Cloud Kubernetes Service .
 options:
     ibmcloud_api_key:
         required: True
@@ -93,7 +93,7 @@ def run_module():
             type="dict",
             options=dict(
                 cluster=dict(required=True, type="str"),
-                ingestionKey=dict(required=False, type="str"),
+                ingestionKey=dict(required=False, no_log=True, type="str"),
                 privateEndpoint=dict(required=False, type="bool"),
                 instance=dict(required=True, type="str"),
             ),
