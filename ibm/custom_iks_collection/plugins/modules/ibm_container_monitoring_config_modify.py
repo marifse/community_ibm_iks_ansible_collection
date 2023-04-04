@@ -100,7 +100,7 @@ def run_module():
             type="dict",
             options=dict(
                 cluster=dict(required=True, type="str"),
-                ingestionKey=dict(required=False, type="str"),
+                ingestionKey=dict(required=False, no_log=True, type="str"),
                 privateEndpoint=dict(required=False, type="bool"),
                 instance=dict(required=True, type="str"),
                 newInstance=dict(required=True, type="str"),

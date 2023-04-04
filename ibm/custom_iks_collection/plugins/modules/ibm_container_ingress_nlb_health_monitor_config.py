@@ -56,18 +56,19 @@ options:
             allowInsecureSet:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
             createdOn:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
             healthcheckProperties:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: list
+                elements: str
             desc:
                 description:
                     - The cluster id which needs to be monitored.
@@ -76,22 +77,22 @@ options:
             followRedirectSet:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
             healtcheckPropertiesSetStatus:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
             modifiedOn:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
             monitorState:
                 description:
                     - The cluster id which needs to be monitored.
-                required: True
+                required: False
                 type: str
             nlbHost:
                 description:
@@ -115,7 +116,7 @@ EXAMPLES = r"""
         desc: "Monitor State"
         followRedirectSet: ""
         healtcheckPropertiesSetStatus: ""
-        nlbHost:""
+        nlbHost: ""
         modifiedOn: ""
         monitorState: ""
 """
@@ -141,7 +142,7 @@ def run_module():
             options=dict(
                 clusterID=dict(required=True, type="str"),
                 idOrName=dict(required=True, type="str"),
-                healthcheckProperties=dict(required=False, type="list"),
+                healthcheckProperties=dict(required=False, type="list", elements="str"),
                 allowInsecureSet=dict(required=False, type="str"),
                 nlbHost=dict(required=True, type="str"),
                 createdOn=dict(required=False, type="str"),
