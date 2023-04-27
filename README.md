@@ -53,21 +53,21 @@ Below steps are follwed to install ansible collections for the IBM Cloud resourc
     
 ### Example Projects
 
-1. [Manage Storage Attachment](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_storage_attachment)
+1. [Manage Storage Attachment](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_storage_attachment)
 
-2. [Manage Config Monitoring](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_config_monitoring)
+2. [Manage Config Monitoring](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_config_monitoring)
 
-3. [Manage IKS Cluster](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_iks_cluster)
+3. [Manage IKS Cluster](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_iks_cluster)
 
-4. [Manage IKS Image Security](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_image_security)
+4. [Manage IKS Image Security](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_image_security)
 
-5. [Manage Ingress ALB for IKS](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_ingress_alb)
+5. [Manage Ingress ALB for IKS](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_ingress_alb)
 
-6. [Manage NLB Health Monitor](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_nlb_health_monitor)
+6. [Manage NLB Health Monitor](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_nlb_health_monitor)
 
-7. [Manage Private/Public Service Endpoints](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_private_public_service_endpoint)
+7. [Manage Private/Public Service Endpoints](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_private_public_service_endpoint)
 
-8. [Manage Secrets for IKS](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/manage_secret)
+8. [Manage Secrets for IKS](https://github.com/marifse/community_ibm_iks_ansible_collections/tree/main/ibm/custom_iks_collection/examples/iks_vpc_cluster/manage_secret)
 
 
 [Install ansible]: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
