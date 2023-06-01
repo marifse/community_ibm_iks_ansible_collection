@@ -15,5 +15,5 @@
   roles:
     - role: ../../../roles/monitoring/removeConfig
       vars:
-        cluster: "mycluster-us-south-2-cx2.2x4"
-        instance: "IBM Cloud Monitoring-7d"
+        cluster: "mycluster-us-south-1-cx2.2x4"
+        instance: "metrics-us-south-5h"
