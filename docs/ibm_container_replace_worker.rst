@@ -93,7 +93,7 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>workerID.</p>
+      <p>Worker Node ID.</p>
       <p class="ansible-option-line"><span class="ansible-option-choices">The existing worker node ID of the cluster to be replaced:</span></p>
     </div></td>
   </tr>
