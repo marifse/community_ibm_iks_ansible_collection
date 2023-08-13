@@ -1,4 +1,4 @@
-ibm.container_monitoring_config_create module -- Modify config monitoring instance to an IBM Kubernetes Cluster
+ibm.container_monitoring_config_modify module -- Modify config monitoring instance to an IBM Kubernetes Cluster
 ======================================================================================================================
 
 Note
