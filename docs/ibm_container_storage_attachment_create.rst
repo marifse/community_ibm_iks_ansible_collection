@@ -85,16 +85,16 @@ Parameters
   </tr>
  <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-cluster"></div>
-      <p class="ansible-option-title"><strong>cluster</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-cluster" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-volumeAttachmentID"></div>
+      <p class="ansible-option-title"><strong>volumeAttachmentID</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-volumeAttachmentID" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
         <span class="ansible-option-type">string</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Cluster Name.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the image security is to be disabled:</span></p>
+      <p>Volume Attachment ID.</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">You can get it using the IBM Cloud CLI:</span></p>
     </div></td>
   </tr>
  <tr class="row-even">
