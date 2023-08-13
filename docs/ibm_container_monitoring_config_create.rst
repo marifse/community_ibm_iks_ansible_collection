@@ -18,7 +18,8 @@ To use it in a playbook, specify: :code:`ibm.container_monitoring_config_create`
 Synopsis
 --------
 
-This module attach the monitoring instance to an IBM Kubernetes Cluster.
+- This module attach the monitoring instance to an IBM Kubernetes Cluster.
+- This module will only be applicable to cluster with no existing monitoring configuration attached.
 
 Requirements
 ------------
