@@ -94,7 +94,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Worker Node ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">The existing worker node ID of the cluster to be replaced:</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">The kubernetes version on which the cluster is desired to be upgraded:</span></p>
     </div></td>
   </tr>
   </tbody>
