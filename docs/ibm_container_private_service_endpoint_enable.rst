@@ -5,9 +5,9 @@ Note
 
 This module is part of the ibm collection (version 1.0.0).
 
-To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_image_security_disable_module_requirements>` for details.
+To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_private_service_endpoint_enable_module_requirements>` for details.
 
-To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
+To use it in a playbook, specify: :code:`ibm.container_private_service_endpoint_enable`.
 
 .. contents::
    :local:
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
 Synopsis
 --------
 
-This module disable the image security for an IBM IKS cluster.
+This module enables the private service endpoint in an IBM IKS cluster.
 
 Requirements
 ------------
@@ -79,7 +79,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Cluster Name.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the image security is to be disabled:</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the private service endpoint is required to be enabled:</span></p>
     </div></td>
   </tr>
   </tbody>
@@ -105,8 +105,8 @@ Examples
 Example usage:
 
 ```yaml
-- name: Disable image security in an IBM Kubernetes Cluster
-  ibm.container_image_security_disable:
+- name: Enable the private service endpoint in an IBM Kubernetes Cluster
+  ibm.container_private_service_endpoint_enable:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
