@@ -109,7 +109,7 @@ Example usage:
 
 ```yaml
 - name: Attach monitoring instance to Kubernetes Cluster
-  ibm.container_image_security_enable:
+  ibm.container_monitoring_config_create:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     config:
       cluster: "Your Cluster Name / ID"
