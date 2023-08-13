@@ -83,7 +83,7 @@ Parameters
       <p class="ansible-option-line"><span class="ansible-option-choices">Suboptions:</span></p>
       <ul class="simple">
         <li><p><span class="ansible-option-choices-entry">cluster</span></p></li>
-        <li><p><span class="ansible-option-choices-entry">The cluster id which needs to be monitored.</span></p></li>
+        <li><p><span class="ansible-option-choices-entry">The cluster id on which the image security is to be disabled.</span></p></li>
       </ul>
     </div></td>
   </tr>
