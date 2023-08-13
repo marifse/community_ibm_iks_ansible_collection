@@ -56,19 +56,6 @@ Parameters
       <p>The IBM Cloud API Key.</p>
     </div></td>
   </tr>
-  <tr class="row-odd">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-resource_group_id"></div>
-      <p class="ansible-option-title"><strong>resource_group_id</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-resource_group_id" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>The ResourceGroup ID</p>
-    </div></td>
-  </tr>
   <tr class="row-even">
     <td><div class="ansible-option-cell">
       <div class="ansibleOptionAnchor" id="parameter-name"></div>
