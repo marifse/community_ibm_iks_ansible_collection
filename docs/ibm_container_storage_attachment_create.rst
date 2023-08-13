@@ -19,7 +19,7 @@ To use it in a playbook, specify: :code:`ibm.container_storage_attachment_create
 Synopsis
 --------
 
-This module attach the volume storage to worker node in an IBM Kubernetes cluster.
+This module attach the block storage volume to worker node in an IBM Kubernetes cluster.
 
 Requirements
 ------------
@@ -94,7 +94,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Volume Attachment ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">You can get it using the IBM Cloud CLI:</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Any fake value can be passed</span></p>
     </div></td>
   </tr>
  <tr class="row-even">
