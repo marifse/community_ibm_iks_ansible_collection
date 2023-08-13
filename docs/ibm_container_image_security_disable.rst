@@ -27,8 +27,89 @@ The below requirements are needed on the host that executes this module.
 
 No requirements needed.
 
+
+
 Parameters
 ----------
+
+
+.. raw:: html
+
+  <table class="colwidths-auto ansible-option-table docutils align-default" style="width: 100%">
+  <thead>
+  <tr class="row-odd">
+    <th class="head"><p>Parameter</p></th>
+    <th class="head"><p>Comments</p></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-id"></div>
+      <p class="ansible-option-title"><strong>id</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-id" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>Unique ID of the service ID.</p>
+    </div></td>
+  </tr>
+  <tr class="row-odd">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-include_activity"></div>
+      <p class="ansible-option-title"><strong>include_activity</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-include_activity" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">boolean</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>Defines if the entity&#x27;s activity is included in the response.
+      Retrieving activity data is an expensive operation, so please only request this when needed.
+      </p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Choices:</span></p>
+      <ul class="simple">
+        <li><p><span class="ansible-option-choices-entry">false</span></p></li>
+        <li><p><span class="ansible-option-choices-entry">true</span></p></li>
+      </ul>
+    </div></td>
+  </tr>
+  <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-include_history"></div>
+      <p class="ansible-option-title"><strong>include_history</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-include_history" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">boolean</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>Defines if the entity history is included in the response.</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Choices:</span></p>
+      <ul class="simple">
+        <li><p><span class="ansible-option-choices-entry">false</span></p></li>
+        <li><p><span class="ansible-option-choices-entry">true</span></p></li>
+      </ul>
+    </div></td>
+  </tr>
+  </tbody>
+  </table>
+
+
+
+.. Attributes
+
+
+.. Notes
+
+
+.. Seealso
+
+
+.. Examples
+
 
 Parameter | Choices/<font color="blue">Defaults</font> | Comments
 --------- | --------- | --------
