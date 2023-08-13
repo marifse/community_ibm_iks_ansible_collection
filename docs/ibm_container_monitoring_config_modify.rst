@@ -122,9 +122,8 @@ Example usage:
 
 ```yaml
 - name: Modify the existing monitoring instance to new monitoring instance in IBM Kubernetes Cluster
-  ibm.container_image_security_enable:
+  ibm.container_monitoring_config_modify:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
     config:
       cluster: "Your Cluster Name / ID"
       instance: "Existing Monitoring Instance ID"
