@@ -53,7 +53,7 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Unique ID of the service ID.</p>
+      <p>The IBM Cloud API Key.</p>
     </div></td>
   </tr>
   <tr class="row-odd">
