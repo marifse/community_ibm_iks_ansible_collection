@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_image_security_enable`.
 Synopsis
 --------
 
-This module enable the image security for an IBM IKS cluster.
+This module enable the image security in an IBM IKS cluster.
 
 Requirements
 ------------
