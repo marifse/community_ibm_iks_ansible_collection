@@ -1,13 +1,13 @@
-ibm.container_image_security_disable module -- Disables the Image Security in an IBM Kubernetes Cluster
+ibm.container_replace_worker module -- Replaces the worker node in an IBM Kubernetes Cluster
 ===================================================
 
 Note
 
 This module is part of the ibm collection (version 1.0.0).
 
-To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_image_security_disable_module_requirements>` for details.
+To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_replace_worker_module_requirements>` for details.
 
-To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
+To use it in a playbook, specify: :code:`ibm.container_replace_worker`.
 
 .. contents::
    :local:
@@ -18,14 +18,14 @@ To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
 Synopsis
 --------
 
-This module disable the image security for an IBM IKS cluster.
+This module replaces the worker node in an IBM Kubernetes cluster.
 
 Requirements
 ------------
 
 The below requirements are needed on the host that executes this module.
 
-No requirements needed.
+- Ansible
 
 
 
@@ -106,8 +106,8 @@ Examples
 Example usage:
 
 ```yaml
-- name: Disable image security in cluster
-  ibm.container_image_security_disable:
+- name: Replaces the worker node in IBM Kubernetes Cluster
+  ibm.container_replace_worker:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
