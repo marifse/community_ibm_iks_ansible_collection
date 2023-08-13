@@ -19,7 +19,7 @@ To use it in a playbook, specify: :code:`ibm.container_storage_attachment_create
 Synopsis
 --------
 
-This module disable the image security for an IBM IKS cluster.
+This module attach the volume storage to worker node in an IBM Kubernetes cluster.
 
 Requirements
 ------------
@@ -106,12 +106,15 @@ Examples
 Example usage:
 
 ```yaml
-- name: Disable image security in an IBM Kubernetes Cluster
-  ibm.container_image_security_disable:
+- name: Attach volume storage to worker node in an IBM Kubernetes Cluster
+  ibm.container_storage_attachment_create:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
       cluster: "Your Cluster ID"
+      volumeAttachmentID: "Volume Attachment ID"
+      volumeID: "Volume ID"
+      
 
 Authors
 ~~~~~~~
