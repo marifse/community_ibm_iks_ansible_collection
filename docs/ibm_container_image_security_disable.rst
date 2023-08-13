@@ -7,7 +7,7 @@ This module is part of the ibm collection (version 1.0.0).
 
 To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_image_security_disable_module_requirements>` for details.
 
-To use it in a playbook, specify: `ibm.container_image_security_disable`.
+To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
 
 Synopsis
 --------
