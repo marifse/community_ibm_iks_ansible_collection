@@ -8,7 +8,7 @@ This module is part of the ibm collection (version 1.0.0).
 
 To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_storage_attachment_delete_module_requirements>` for details.
 
-To use it in a playbook, specify: :code:`ibm.container_storage_attachment_create`.
+To use it in a playbook, specify: :code:`ibm.container_storage_attachment_delete`.
 
 .. contents::
    :local:
