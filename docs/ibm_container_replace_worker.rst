@@ -85,16 +85,16 @@ Parameters
   </tr>
    <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-workerID"></div>
-      <p class="ansible-option-title"><strong>workerID</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-workerID" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-version"></div>
+      <p class="ansible-option-title"><strong>version</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-version" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
         <span class="ansible-option-type">string</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Worker Node ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">The existing worker node ID of the cluster to be replaced:</span></p>
+      <p>version.</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">The kubernetes version on which the cluster is desired to be upgraded:</span></p>
     </div></td>
   </tr>
   </tbody>
@@ -125,8 +125,8 @@ Example usage:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
-      cluster: "Your Cluster ID"
-      workerID: "Worker Node ID"
+      cluster: "Your Cluster Name / ID"
+      version: "Available IBM Kubernetes Cluster Version"
 
 Authors
 ~~~~~~~
