@@ -45,9 +45,9 @@ Parameters
   <tbody>
   <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-id"></div>
+      <div class="ansibleOptionAnchor" id="parameter-ibmcloud_api_key"></div>
       <p class="ansible-option-title"><strong>ibmcloud_api_key</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-id" title="Permalink to this option"></a>
+      <a class="ansibleOptionLink" href="#parameter-ibmcloud_api_key" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
         <span class="ansible-option-type">string</span>
       </p>
@@ -58,11 +58,11 @@ Parameters
   </tr>
   <tr class="row-odd">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-include_activity"></div>
-      <p class="ansible-option-title"><strong>include_activity</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-include_activity" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-resource_group_id"></div>
+      <p class="ansible-option-title"><strong>resource_group_id</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-resource_group_id" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
-        <span class="ansible-option-type">boolean</span>
+        <span class="ansible-option-type">string</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
