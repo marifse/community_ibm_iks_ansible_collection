@@ -1,4 +1,4 @@
-ibm.container_monitoring_config_create module -- Creates the monitoring configuration for an IBM Kubernetes Cluster
+ibm.container_monitoring_config_create module -- Create the monitoring config. for an IBM Kubernetes Cluster
 ===================================================
 
 Note
