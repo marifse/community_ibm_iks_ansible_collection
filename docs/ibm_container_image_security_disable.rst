@@ -46,7 +46,7 @@ Parameters
   <tr class="row-even">
     <td><div class="ansible-option-cell">
       <div class="ansibleOptionAnchor" id="parameter-id"></div>
-      <p class="ansible-option-title"><strong>id</strong></p>
+      <p class="ansible-option-title"><strong>ibmcloud_api_key</strong></p>
       <a class="ansibleOptionLink" href="#parameter-id" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
         <span class="ansible-option-type">string</span>
