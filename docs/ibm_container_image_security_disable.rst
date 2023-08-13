@@ -66,31 +66,24 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Defines if the entity&#x27;s activity is included in the response.
-      Retrieving activity data is an expensive operation, so please only request this when needed.
-      </p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Choices:</span></p>
-      <ul class="simple">
-        <li><p><span class="ansible-option-choices-entry">false</span></p></li>
-        <li><p><span class="ansible-option-choices-entry">true</span></p></li>
-      </ul>
+      <p>The ResourceGroup ID</p>
     </div></td>
   </tr>
   <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-include_history"></div>
-      <p class="ansible-option-title"><strong>include_history</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-include_history" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-config"></div>
+      <p class="ansible-option-title"><strong>config</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-config" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
-        <span class="ansible-option-type">boolean</span>
+        <span class="ansible-option-type">string</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Defines if the entity history is included in the response.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Choices:</span></p>
+      <p>Configuration.</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Suboptions:</span></p>
       <ul class="simple">
-        <li><p><span class="ansible-option-choices-entry">false</span></p></li>
-        <li><p><span class="ansible-option-choices-entry">true</span></p></li>
+        <li><p><span class="ansible-option-choices-entry">cluster</span></p></li>
+        <li><p><span class="ansible-option-choices-entry">The cluster id which needs to be monitored.</span></p></li>
       </ul>
     </div></td>
   </tr>
@@ -110,17 +103,6 @@ Parameters
 
 .. Examples
 
-
-Parameter | Choices/<font color="blue">Defaults</font> | Comments
---------- | --------- | --------
-**ibmcloud_api_key** | <font color="blue">required</font> | The IBM Cloud API Key.
-**resource_group_id** | <font color="blue">required</font> | The ResourceGroup ID
-**config** | <font color="blue">required</font> | Configuration
-
-**config** suboptions:
-
-- **cluster**: <font color="blue">required</font> <font color="magenta">[default: null]</font>
-        The cluster id which needs to be monitored.
 
 Examples
 --------
