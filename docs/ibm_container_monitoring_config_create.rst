@@ -5,9 +5,9 @@ Note
 
 This module is part of the ibm collection (version 1.0.0).
 
-To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_update_master_module_requirements>` for details.
+To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_monitoring_config_create_module_requirements>` for details.
 
-To use it in a playbook, specify: :code:`ibm.container_update_master`.
+To use it in a playbook, specify: :code:`ibm.container_monitoring_config_create`.
 
 .. contents::
    :local:
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_update_master`.
 Synopsis
 --------
 
-This module updates the version for the IBM Kubernetes Cluster.
+This module creates the monitoring configuration for the IBM Kubernetes Cluster.
 
 Requirements
 ------------
