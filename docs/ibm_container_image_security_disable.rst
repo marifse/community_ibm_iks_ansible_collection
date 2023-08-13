@@ -53,3 +53,8 @@ Example usage:
     resource_group_id: "{{ resource_group_id }}"
     config:
       cluster: "Your Cluster ID"
+
+Authors
+~~~~~~~
+
+- Muhammad Arif (@marifse)
