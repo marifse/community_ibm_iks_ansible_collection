@@ -1,5 +1,5 @@
-ibm.container_monitoring_config_create module -- Create the monitoring config. for an IBM Kubernetes Cluster
-===================================================
+ibm.container_monitoring_config_create module -- Attach config monitoring instance to an IBM Kubernetes Cluster
+======================================================================================================================
 
 Note
 
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_monitoring_config_create`
 Synopsis
 --------
 
-This module creates the monitoring configuration for the IBM Kubernetes Cluster.
+This module attach the monitoring instance to an IBM Kubernetes Cluster.
 
 Requirements
 ------------
