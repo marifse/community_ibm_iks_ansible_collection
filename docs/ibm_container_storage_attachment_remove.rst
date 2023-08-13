@@ -6,7 +6,7 @@ Note
 
 This module is part of the ibm collection (version 1.0.0).
 
-To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_storage_attachement_create_module_requirements>` for details.
+To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_storage_attachment_delete_module_requirements>` for details.
 
 To use it in a playbook, specify: :code:`ibm.container_storage_attachment_create`.
 
@@ -19,7 +19,7 @@ To use it in a playbook, specify: :code:`ibm.container_storage_attachment_create
 Synopsis
 --------
 
-This module attach the block storage volume to worker node in an IBM Kubernetes cluster.
+This module removes the attached the block storage volume from worker node in an IBM Kubernetes cluster.
 
 Requirements
 ------------
@@ -94,21 +94,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Volume Attachment ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Any fake value can be passed</span></p>
-    </div></td>
-  </tr>
- <tr class="row-even">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-volumeID"></div>
-      <p class="ansible-option-title"><strong>volumeID</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-volumeID" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>Volume ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Volume ID, the volume which is required to be attached to worker node:</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">The volume attachment id, can be fetched using IBM Cloud CLI</span></p>
     </div></td>
   </tr>
  <tr class="row-even">
@@ -148,14 +134,13 @@ Examples
 Example usage:
 
 ```yaml
-- name: Attach volume storage to worker node in an IBM Kubernetes Cluster
-  ibm.container_storage_attachment_create:
+- name: Detach volume storage from worker node in an IBM Kubernetes Cluster
+  ibm.container_storage_attachment_delete:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
       cluster: "Your Cluster ID"
       volumeAttachmentID: "Volume Attachment ID"
-      volumeID: "Volume ID"
       worker: "Worker Node ID"
       
 
