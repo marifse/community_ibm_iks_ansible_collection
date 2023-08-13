@@ -93,7 +93,7 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>instance.</p>
+      <p>Monitoring Instance ID</p>
       <p class="ansible-option-line"><span class="ansible-option-choices">The monitoring config instance Id to be attached to IBM Kubernetes Cluster</span></p>
     </div></td>
   </tr>
