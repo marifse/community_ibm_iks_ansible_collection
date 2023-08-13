@@ -19,7 +19,7 @@ To use it in a playbook, specify: :code:`ibm.container_storage_attachment_delete
 Synopsis
 --------
 
-This module removes the attached the block storage volume from worker node in an IBM Kubernetes cluster.
+This module removes the attached block storage volume from worker node in an IBM Kubernetes cluster.
 
 Requirements
 ------------
