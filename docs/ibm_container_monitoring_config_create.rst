@@ -108,10 +108,9 @@ Examples
 Example usage:
 
 ```yaml
-- name: Enable image security in an IBM Kubernetes Cluster
+- name: Attach monitoring instance to Kubernetes Cluster
   ibm.container_image_security_enable:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
     config:
       cluster: "Your Cluster Name / ID"
       instance: "Monitoring Instance ID"
