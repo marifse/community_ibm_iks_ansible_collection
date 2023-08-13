@@ -1,5 +1,5 @@
 ibm.container_monitoring_config_discover module -- Discover config monitoring instance to an IBM Kubernetes Cluster
-======================================================================================================================
+===================================================================================================================
 
 Note
 
@@ -7,7 +7,7 @@ This module is part of the ibm collection (version 1.0.0).
 
 To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_monitoring_config_discover_module_requirements>` for details.
 
-To use it in a playbook, specify: :code:`ibm.container_monitoring_config_create`.
+To use it in a playbook, specify: :code:`ibm.container_monitoring_config_discover`.
 
 .. contents::
    :local:
@@ -18,8 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_monitoring_config_create`
 Synopsis
 --------
 
-- This module attach the monitoring instance to an IBM Kubernetes Cluster.
-- This module will only be applicable to cluster with no existing monitoring configuration attached.
+- This module discover the monitoring instance to an IBM Kubernetes Cluster.
 
 Requirements
 ------------
@@ -108,8 +107,8 @@ Examples
 Example usage:
 
 ```yaml
-- name: Attach monitoring instance to Kubernetes Cluster
-  ibm.container_monitoring_config_create:
+- name: Discover monitoring instance to Kubernetes Cluster
+  ibm.container_monitoring_config_discover:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     config:
       cluster: "Your Cluster Name / ID"
