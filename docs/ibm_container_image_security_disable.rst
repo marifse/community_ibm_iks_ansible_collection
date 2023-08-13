@@ -1,4 +1,4 @@
-ibm.container_image_security_disable module -- Delete a secret from an NLB subdomain in your cluster
+ibm.container_image_security_disable module -- Disables the Image Security in a Cluster
 ===================================================
 
 Note
