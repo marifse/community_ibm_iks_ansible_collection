@@ -80,7 +80,21 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Cluster Name.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the image security is to be disabled:</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the worker node is required to be replaced:</span></p>
+    </div></td>
+  </tr>
+   <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-workerID"></div>
+      <p class="ansible-option-title"><strong>workerID</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-workerID" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>Worker Node ID.</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">The existing worker node ID of the cluster to be replaced:</span></p>
     </div></td>
   </tr>
   </tbody>
@@ -112,6 +126,7 @@ Example usage:
     resource_group_id: "{{ resource_group_id }}"
     config:
       cluster: "Your Cluster ID"
+      workerID: "Worker Node ID"
 
 Authors
 ~~~~~~~
