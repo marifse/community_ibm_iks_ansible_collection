@@ -54,7 +54,7 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>The IBM Cloud API Key.</p>
+      <p>The IBM Cloud API Key. Can be provided in the ./inventory/main.cfg</p>
     </div></td>
   </tr>
   <tr class="row-even">
