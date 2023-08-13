@@ -1,5 +1,5 @@
-ibm.container_image_security_disable module -- Enable the private service endpoint in an IBM Kubernetes Cluster
-===================================================
+ibm.container_private_service_endpoint_enable module -- Enable the private service endpoint in an IBM Kubernetes Cluster
+========================================================================================================================
 
 Note
 
