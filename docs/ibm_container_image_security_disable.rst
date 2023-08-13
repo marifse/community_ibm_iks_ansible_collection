@@ -105,7 +105,7 @@ Examples
 Example usage:
 
 ```yaml
-- name: Disable image security in cluster
+- name: Disable image security in an IBM Kubernetes Cluster
   ibm.container_image_security_disable:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
