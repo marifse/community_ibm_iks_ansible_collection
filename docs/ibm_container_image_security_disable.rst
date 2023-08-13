@@ -1,4 +1,4 @@
-ibm.container_image_security_disable module -- Disables the Image Security in a Cluster
+ibm.container_image_security_disable module -- Disables the Image Security in an IBM Kubernetes Cluster
 ===================================================
 
 Note
