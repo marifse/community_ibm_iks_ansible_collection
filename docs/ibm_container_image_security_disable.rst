@@ -110,7 +110,7 @@ Examples
 Example usage:
 
 ```yaml
-- name: Delete secret from NLB subdomain in cluster
+- name: Disable image security in cluster
   ibm.container_image_security_disable:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
