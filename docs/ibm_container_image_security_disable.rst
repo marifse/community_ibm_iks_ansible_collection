@@ -71,20 +71,16 @@ Parameters
   </tr>
   <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-config"></div>
-      <p class="ansible-option-title"><strong>config</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-config" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-name"></div>
+      <p class="ansible-option-title"><strong>name</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-name" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
         <span class="ansible-option-type">string</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Configuration.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Suboptions:</span></p>
-      <ul class="simple">
-        <li><p><span class="ansible-option-choices-entry">cluster</span></p></li>
-        <li><p><span class="ansible-option-choices-entry">The cluster id on which the image security is to be disabled.</span></p></li>
-      </ul>
+      <p>Cluster Name.</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the image security is to be disabled:</span></p>
     </div></td>
   </tr>
   </tbody>
