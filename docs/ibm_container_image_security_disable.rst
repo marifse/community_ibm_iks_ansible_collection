@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
 Synopsis
 --------
 
-This module deletes a secret from an NLB subdomain in your cluster and prevents future renewal of the certificate.
+This module disable the image security for an IBM IKS cluster.
 
 Requirements
 ------------
