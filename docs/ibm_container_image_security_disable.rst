@@ -9,6 +9,12 @@ To install it, use: ansible-galaxy collection install ibm. You need further requ
 
 To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
 
+.. contents::
+   :local:
+   :depth: 1
+
+.. Deprecated
+
 Synopsis
 --------
 
