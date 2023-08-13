@@ -71,9 +71,9 @@ Parameters
   </tr>
   <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-name"></div>
-      <p class="ansible-option-title"><strong>name</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-name" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-cluster"></div>
+      <p class="ansible-option-title"><strong>cluster</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-cluster" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
         <span class="ansible-option-type">string</span>
       </p>
