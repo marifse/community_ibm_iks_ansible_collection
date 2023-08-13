@@ -7,7 +7,7 @@ This module is part of the ibm collection (version 1.0.0).
 
 To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_update_master_module_requirements>` for details.
 
-To use it in a playbook, specify: :code:`ibm.container_image_security_enable`.
+To use it in a playbook, specify: :code:`ibm.container_update_master`.
 
 .. contents::
    :local:
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_image_security_enable`.
 Synopsis
 --------
 
-This module enable the image security in an IBM IKS cluster.
+This module updates the version for the IBM Kubernetes Cluster.
 
 Requirements
 ------------
@@ -81,6 +81,20 @@ Parameters
     <td><div class="ansible-option-cell">
       <p>Cluster Name.</p>
       <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the image security is to be enabled:</span></p>
+    </div></td>
+  </tr>
+  <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-workerID"></div>
+      <p class="ansible-option-title"><strong>workerID</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-workerID" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>Worker Node ID.</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">The existing worker node ID of the cluster to be replaced:</span></p>
     </div></td>
   </tr>
   </tbody>
