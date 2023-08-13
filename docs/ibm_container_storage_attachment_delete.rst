@@ -1,5 +1,5 @@
 
-ibm.container_storage_attachment_create module -- Remove volume storage from worker node in kubernetes cluster 
+ibm.container_storage_attachment_delete module -- Remove volume storage from worker node in kubernetes cluster 
 ==============================================================================================================
 
 Note
