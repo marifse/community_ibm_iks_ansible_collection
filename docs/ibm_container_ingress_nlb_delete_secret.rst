@@ -120,7 +120,7 @@ Example usage:
 
 ```yaml
 - name: Deletes an ingress nlb secret in an IBM Kubernetes Cluster
-  ibm.container_pull_secret_enable:
+  ibm.container_ingress_nlb_delete_secret:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
