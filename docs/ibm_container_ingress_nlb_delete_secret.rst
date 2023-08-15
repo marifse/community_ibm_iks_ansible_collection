@@ -92,7 +92,7 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>subDomain</p>
+      <p>Sub-domain</p>
       <p class="ansible-option-line"><span class="ansible-option-choices">The ingress subdomain of kubernetes cluster on which the secret is desired to be deleted</span></p>
     </div></td>
   </tr>
