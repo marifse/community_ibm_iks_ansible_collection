@@ -79,7 +79,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Cluster Name.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the image security is to be disabled:</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which the image pull secret is to be enabled:</span></p>
     </div></td>
   </tr>
   </tbody>
