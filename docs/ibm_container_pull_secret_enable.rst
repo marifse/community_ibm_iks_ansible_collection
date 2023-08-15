@@ -1,5 +1,5 @@
 ibm.container_pull_secret_enable module -- Enable pull secret in an IBM Kubernetes Cluster
-===================================================
+==========================================================================================
 
 Note
 
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_pull_secret_enable`.
 Synopsis
 --------
 
-This module enable the pull secret for an IBM IKS cluster.
+This module enable the pull secret for an image in IBM IKS cluster.
 
 Requirements
 ------------
@@ -105,8 +105,8 @@ Examples
 Example usage:
 
 ```yaml
-- name: Disable image security in an IBM Kubernetes Cluster
-  ibm.container_image_security_disable:
+- name: Enable pull secret for an image in an IBM Kubernetes Cluster
+  ibm.container_pull_secret_enable:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
