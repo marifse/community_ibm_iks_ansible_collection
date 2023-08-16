@@ -93,7 +93,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>ALB ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">The ingress image version; 1.4.0_5218_iks, you can ls the image version using this command "ibmcloud ks ingress alb versions":</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">The load balancer id</span></p>
     </div></td>
   </tr>
    <tr class="row-even">
