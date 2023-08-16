@@ -105,13 +105,16 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Enable image security in an IBM Kubernetes Cluster
-  ibm.container_image_security_enable:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster ID"
+.. code-block:: yaml
+
+   - name: Enable image security in an IBM Kubernetes Cluster
+     hosts: localhost
+     tasks:
+        ibm.container_image_security_enable:
+          ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+          resource_group_id: "{{ resource_group_id }}"
+          config:
+         cluster: "Your Cluster ID"
 
 Authors
 ~~~~~~~
