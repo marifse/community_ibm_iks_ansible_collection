@@ -79,7 +79,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Cluster Name / ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster on which the ALP is desired to be created</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster on which the ingress ALB is desired to be created</span></p>
     </div></td>
   </tr>
   <tr class="row-even">
