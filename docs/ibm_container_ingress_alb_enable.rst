@@ -121,14 +121,17 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Enable a public or private ALB in a specified zone and VPC cluster
-  ibm.container_ingress_alb_enable:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster Name / ID"
-      albID: "The ingress ALB id"
+.. code-block:: yaml
+
+   - name: Enable a public or private ALB in a specified zone and VPC cluster
+     hosts: localhost
+     tasks:
+       ibm.container_ingress_alb_enable:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           cluster: "Your Cluster Name / ID"
+           albID: "The ingress ALB id"
       
       
 
