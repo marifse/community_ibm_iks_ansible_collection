@@ -152,6 +152,20 @@ Parameters
       <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
+  <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-healtcheckPropertiesSetStatus"></div>
+      <p class="ansible-option-title"><strong>healtcheckPropertiesSetStatus</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-healtcheckPropertiesSetStatus" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>enabled or disabled</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
+    </div></td>
+  </tr>
 
   </tbody>
   </table>
@@ -187,6 +201,7 @@ Example usage:
       healthcheckProperties: "backend-pool"
       desc: "Monitor State"
       followRedirectSet: "/"
+      healtcheckPropertiesSetStatus: "enabled || disabled"
       
 
 Authors
