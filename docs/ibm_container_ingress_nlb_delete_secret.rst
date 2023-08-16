@@ -118,14 +118,17 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Deletes an ingress nlb secret in an IBM Kubernetes Cluster
-  ibm.container_ingress_nlb_delete_secret:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster ID"
-      subDomain: "The subdomain of the ingress NLB in kubernetes cluster"
+.. code-block:: yaml
+
+   - name: Deletes an ingress nlb secret in an IBM Kubernetes Cluster
+     hosts: localhost
+     tasks:
+       ibm.container_ingress_nlb_delete_secret:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           cluster: "Your Cluster ID"
+           subDomain: "The subdomain of the ingress NLB in kubernetes cluster"
 
 Authors
 ~~~~~~~
