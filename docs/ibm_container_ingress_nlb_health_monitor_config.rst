@@ -102,12 +102,12 @@ Parameters
       <p class="ansible-option-title"><strong>allowInsecureSet</strong></p>
       <a class="ansibleOptionLink" href="#parameter-idOrName" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
+        <span class="ansible-option-type">Boolean</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Boolean</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">True or False</span></p>
+      <p>True or False</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
   <tr class="row-even">
