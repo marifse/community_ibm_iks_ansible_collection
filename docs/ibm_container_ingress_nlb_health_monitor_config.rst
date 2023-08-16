@@ -166,6 +166,20 @@ Parameters
       <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
+  <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-nlbHost:"></div>
+      <p class="ansible-option-title"><strong>nlbHost:</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-nlbHost:" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>NLB Host Domain Name</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
+    </div></td>
+  </tr>
 
   </tbody>
   </table>
@@ -197,11 +211,12 @@ Example usage:
     config:
       clusterID: "Your Cluster ID"
       idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
-      allowInsecureSet: "Yes or No"
+      allowInsecureSet: "true"
       healthcheckProperties: "backend-pool"
       desc: "Monitor State"
       followRedirectSet: "/"
       healtcheckPropertiesSetStatus: "enabled || disabled"
+      nlbHost: "NLB Host Domain Name"
       
 
 Authors
