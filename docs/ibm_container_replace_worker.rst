@@ -119,14 +119,17 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Replaces the worker node in IBM Kubernetes Cluster
-  ibm.container_replace_worker:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster Name / ID"
-      workerID: "Worker Node ID"
+.. code-block:: yaml
+
+   - name: Replaces the worker node in IBM Kubernetes Cluster
+     hosts: localhost
+     tasks:
+       ibm.container_replace_worker:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           cluster: "Your Cluster Name / ID"
+           workerID: "Worker Node ID"
 
 Authors
 ~~~~~~~
