@@ -120,14 +120,17 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Modify the existing monitoring instance to new monitoring instance in IBM Kubernetes Cluster
-  ibm.container_monitoring_config_modify:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    config:
-      cluster: "Your Cluster Name / ID"
-      instance: "Existing Monitoring Instance ID"
-      newInstance: "New Monitoring Instance ID"
+.. code-block:: yaml
+
+   - name: Modify the existing monitoring instance to new monitoring instance in IBM Kubernetes Cluster
+     hosts: localhost
+     tasks:
+       ibm.container_monitoring_config_modify:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         config:
+           cluster: "Your Cluster Name / ID"
+           instance: "Existing Monitoring Instance ID"
+           newInstance: "New Monitoring Instance ID"
 
 Authors
 ~~~~~~~
