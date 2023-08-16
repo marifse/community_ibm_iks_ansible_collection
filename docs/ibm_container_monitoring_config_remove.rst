@@ -106,13 +106,16 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Remove monitoring instance from Kubernetes Cluster
-  ibm.container_monitoring_config_remove:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    config:
-      cluster: "Your Cluster Name / ID"
-      instance: "Monitoring Instance ID"
+.. code-block:: yaml
+
+   - name: Remove monitoring instance from Kubernetes Cluster
+     hosts: localhost
+     tasks:
+       ibm.container_monitoring_config_remove:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         config:
+           cluster: "Your Cluster Name / ID"
+           instance: "Monitoring Instance ID"
 
 Authors
 ~~~~~~~
