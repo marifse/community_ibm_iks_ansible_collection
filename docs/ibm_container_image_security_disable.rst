@@ -107,11 +107,13 @@ Example usage:
 .. code-block:: yaml
 
    - name: Disable image security in an IBM Kubernetes Cluster
-     ibm.container_image_security_disable:
-       ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-       resource_group_id: "{{ resource_group_id }}"
-       config:
-         cluster: "Your Cluster ID"
+      hosts: localhost
+      tasks:
+        ibm.container_image_security_disable:
+          ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+          resource_group_id: "{{ resource_group_id }}"
+          config:
+            cluster: "Your Cluster ID"
 
 Authors
 ~~~~~~~
