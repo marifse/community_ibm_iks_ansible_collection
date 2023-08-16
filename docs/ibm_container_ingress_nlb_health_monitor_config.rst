@@ -120,8 +120,8 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>healthcheckProperties</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">backend-pool</span></p>
+      <p>backend-pool</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
   <tr class="row-even">
@@ -135,7 +135,21 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Monitor State</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Monitor State</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
+    </div></td>
+  </tr>
+   <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-followRedirectSet"></div>
+      <p class="ansible-option-title"><strong>followRedirectSet</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-followRedirectSet" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>/</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
 
@@ -172,6 +186,7 @@ Example usage:
       allowInsecureSet: "Yes or No"
       healthcheckProperties: "backend-pool"
       desc: "Monitor State"
+      followRedirectSet: "/"
       
 
 Authors
