@@ -106,8 +106,8 @@ Parameters
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>allowInsecureSet.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Boolean Value (yes or no):</span></p>
+      <p>Boolean</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">True or False</span></p>
     </div></td>
   </tr>
   <tr class="row-even">
