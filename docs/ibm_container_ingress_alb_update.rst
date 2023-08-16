@@ -103,7 +103,7 @@ Parameters
       <p class="ansible-option-title"><strong>albList</strong></p>
       <a class="ansibleOptionLink" href="#parameter-albList" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
-        <span class="ansible-option-type">Boolean/span>
+        <span class="ansible-option-type">Array String</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
