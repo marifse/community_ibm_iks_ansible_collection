@@ -114,7 +114,7 @@ Example usage:
           ibmcloud_api_key: "{{ ibmcloud_api_key }}"
           resource_group_id: "{{ resource_group_id }}"
           config:
-         cluster: "Your Cluster ID"
+            cluster: "Your Cluster ID"
 
 Authors
 ~~~~~~~
