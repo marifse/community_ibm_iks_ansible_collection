@@ -104,13 +104,16 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Disable the public service endpoint in an IBM Kubernetes Cluster
-  ibm.container_public_service_endpoint_disable:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster ID"
+.. code-block:: yaml
+
+   - name: Disable the public service endpoint in an IBM Kubernetes Cluster
+     hosts: localhost
+     tasks:
+       ibm.container_public_service_endpoint_disable:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           cluster: "Your Cluster ID"
 
 Authors
 ~~~~~~~
