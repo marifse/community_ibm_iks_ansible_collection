@@ -110,6 +110,20 @@ Parameters
       <p class="ansible-option-line"><span class="ansible-option-choices">Boolean Value (yes or no):</span></p>
     </div></td>
   </tr>
+  <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-healthcheckProperties"></div>
+      <p class="ansible-option-title"><strong>healthcheckProperties</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-idOrName" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>healthcheckProperties</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Backend Pool</span></p>
+    </div></td>
+  </tr>
 
   </tbody>
   </table>
