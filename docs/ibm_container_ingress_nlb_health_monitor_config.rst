@@ -121,7 +121,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>healthcheckProperties</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Backend Pool</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">backend-pool</span></p>
     </div></td>
   </tr>
 
@@ -156,6 +156,7 @@ Example usage:
       clusterID: "Your Cluster ID"
       idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
       allowInsecureSet: "Yes or No"
+      healthcheckProperties: "backend-pool"
       
 
 Authors
