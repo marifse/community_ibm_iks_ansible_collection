@@ -106,7 +106,7 @@ Example usage:
 
 .. code-block:: yaml
 
-   - name: Disable image security in an IBM Kubernetes Cluster
+    - name: Disable image security in an IBM Kubernetes Cluster
       hosts: localhost
       tasks:
         ibm.container_image_security_disable:
