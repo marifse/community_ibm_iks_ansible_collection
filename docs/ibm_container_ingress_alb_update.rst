@@ -136,15 +136,18 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Updates the versions of ALB in a Kubernetes Cluster
-  ibm.container_ingress_alb_update:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster Name / ID"
-      albBuild: "The ingress ALB version to update"
-      albList: ["ALB1", "ALB2"]
+.. code-block:: yaml
+
+   - name: Updates the versions of ALB in a Kubernetes Cluster
+     hosts: localhost
+     tasks:
+       ibm.container_ingress_alb_update:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           cluster: "Your Cluster Name / ID"
+           albBuild: "The ingress ALB version to update"
+           albList: ["ALB1", "ALB2"]
       
       
 
