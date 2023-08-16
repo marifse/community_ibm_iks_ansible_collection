@@ -124,6 +124,20 @@ Parameters
       <p class="ansible-option-line"><span class="ansible-option-choices">backend-pool</span></p>
     </div></td>
   </tr>
+  <tr class="row-even">
+    <td><div class="ansible-option-cell">
+      <div class="ansibleOptionAnchor" id="parameter-desc"></div>
+      <p class="ansible-option-title"><strong>desc</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-desc" title="Permalink to this option"></a>
+      <p class="ansible-option-type-line">
+        <span class="ansible-option-type">string</span>
+      </p>
+    </div></td>
+    <td><div class="ansible-option-cell">
+      <p>Monitor State</p>
+      <p class="ansible-option-line"><span class="ansible-option-choices">Monitor State</span></p>
+    </div></td>
+  </tr>
 
   </tbody>
   </table>
@@ -157,6 +171,7 @@ Example usage:
       idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
       allowInsecureSet: "Yes or No"
       healthcheckProperties: "backend-pool"
+      desc: "Monitor State"
       
 
 Authors
