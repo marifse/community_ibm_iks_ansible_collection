@@ -147,16 +147,19 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Attach volume storage to worker node in an IBM Kubernetes Cluster
-  ibm.container_storage_attachment_create:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster ID"
-      volumeAttachmentID: "Volume Attachment ID"
-      volumeID: "Volume ID"
-      worker: "Worker Node ID"
+.. code-block:: yaml
+
+   - name: Attach volume storage to worker node in an IBM Kubernetes Cluster
+     hosts: localhost
+     tasks:
+       ibm.container_storage_attachment_create:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           cluster: "Your Cluster ID"
+           volumeAttachmentID: "Volume Attachment ID"
+           volumeID: "Volume ID"
+           worker: "Worker Node ID"
       
 
 Authors
