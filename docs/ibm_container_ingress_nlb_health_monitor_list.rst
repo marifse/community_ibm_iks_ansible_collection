@@ -106,14 +106,17 @@ Examples
 
 Example usage:
 
-```yaml
-- name: List the settings for all existing health check monitors in a cluster
-  ibm.container_ingress_nlb_health_monitor_list:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster ID"
-      idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
+.. code-block:: yaml
+
+   - name: List the settings for all existing health check monitors in a cluster
+     hosts: localhost
+     tasks:
+       ibm.container_ingress_nlb_health_monitor_list:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           cluster: "Your Cluster ID"
+           idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
 
 Authors
 ~~~~~~~
