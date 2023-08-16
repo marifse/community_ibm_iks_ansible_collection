@@ -148,16 +148,19 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Create a public or private ALB in a specified zone and VPC cluster
-  ibm.container_ingress_alb_create:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      cluster: "Your Cluster Name / ID"
-      ingressImage: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
-      type: "private"
-      zone: "us-south-1"
+.. code-block:: yaml
+
+   - name: Create a public or private ALB in a specified zone and VPC cluster
+     hosts: localhost
+     tasks:
+        ibm.container_ingress_alb_create:
+          ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+          resource_group_id: "{{ resource_group_id }}"
+          config:
+            cluster: "Your Cluster Name / ID"
+            ingressImage: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
+            type: "private"
+            zone: "us-south-1"
       
       
 
