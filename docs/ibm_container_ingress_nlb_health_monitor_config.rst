@@ -203,20 +203,23 @@ Examples
 
 Example usage:
 
-```yaml
-- name: Create and optionally enable a health check monitor for an existing NLB subdomain in a cluster
-  ibm.container_ingress_nlb_health_monitor_config:
-    ibmcloud_api_key: "{{ ibmcloud_api_key }}"
-    resource_group_id: "{{ resource_group_id }}"
-    config:
-      clusterID: "Your Cluster ID"
-      idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
-      allowInsecureSet: "true"
-      healthcheckProperties: "backend-pool"
-      desc: "Monitor State"
-      followRedirectSet: "/"
-      healtcheckPropertiesSetStatus: "enabled || disabled"
-      nlbHost: "NLB Host Domain Name"
+.. code-block:: yaml
+
+   - name: Create and optionally enable a health check monitor for an existing NLB subdomain in a cluster
+     hosts: localhost
+     tasks:
+       ibm.container_ingress_nlb_health_monitor_config:
+         ibmcloud_api_key: "{{ ibmcloud_api_key }}"
+         resource_group_id: "{{ resource_group_id }}"
+         config:
+           clusterID: "Your Cluster ID"
+           idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
+           allowInsecureSet: "true"
+           healthcheckProperties: "backend-pool"
+           desc: "Monitor State"
+           followRedirectSet: "/"
+           healtcheckPropertiesSetStatus: "enabled || disabled"
+           nlbHost: "NLB Host Domain Name"
       
 
 Authors
