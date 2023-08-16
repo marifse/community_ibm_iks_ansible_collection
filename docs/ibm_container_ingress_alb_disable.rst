@@ -84,46 +84,33 @@ Parameters
   </tr>
   <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-ingressImage"></div>
-      <p class="ansible-option-title"><strong>ingressImage</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-ingressImage" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-albID"></div>
+      <p class="ansible-option-title"><strong>albID</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-albID" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
         <span class="ansible-option-type">string</span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>Image Version.</p>
+      <p>ALB ID.</p>
       <p class="ansible-option-line"><span class="ansible-option-choices">The ingress image version; 1.4.0_5218_iks, you can ls the image version using this command "ibmcloud ks ingress alb versions":</span></p>
     </div></td>
   </tr>
    <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-type"></div>
-      <p class="ansible-option-title"><strong>type</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-idOrName" title="Permalink to this option"></a>
+      <div class="ansibleOptionAnchor" id="parameter-disableDeployment"></div>
+      <p class="ansible-option-title"><strong>disableDeployment</strong></p>
+      <a class="ansibleOptionLink" href="#parameter-disableDeployment" title="Permalink to this option"></a>
       <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
+        <span class="ansible-option-type">Boolean/span>
       </p>
     </div></td>
     <td><div class="ansible-option-cell">
-      <p>private or public</p>
+      <p>True</p>
       <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
-  <tr class="row-even">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-zone"></div>
-      <p class="ansible-option-title"><strong>zone</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-zone" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>us-south-1</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
-    </div></td>
-  </tr>
+  
 
 
   </tbody>
@@ -149,15 +136,14 @@ Examples
 Example usage:
 
 ```yaml
-- name: Create a public or private ALB in a specified zone and VPC cluster
-  ibm.container_ingress_alb_create:
+- name: Disable a public or private ALB in a specified zone and VPC cluster
+  ibm.container_ingress_alb_disable:
     ibmcloud_api_key: "{{ ibmcloud_api_key }}"
     resource_group_id: "{{ resource_group_id }}"
     config:
       cluster: "Your Cluster Name / ID"
-      ingressImage: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
-      type: "private"
-      zone: "us-south-1"
+      albID: "The ingress ALB id"
+      disableDeployment: "True"
       
       
 
