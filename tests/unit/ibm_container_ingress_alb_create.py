@@ -4,7 +4,7 @@ from unittest.mock import patch
 from ansible_collections.your_collection.your_module import ibm_container_ingress_alb_create
 
 
-class TestIBMContainerImageSecurityDisable(unittest.TestCase):
+class TestIBMContainerIngressALBCreate(unittest.TestCase):
     @patch("ansible_collections.your_collection.your_module.ibm_container_ingress_alb_create.Authenticator")
     @patch("ansible_collections.your_collection.your_module.ibm_container_ingress_alb_create.ImageSecret")
     @patch("ansible_collections.your_collection.your_module.ibm_container_ingress_alb_create.AnsibleModule")
