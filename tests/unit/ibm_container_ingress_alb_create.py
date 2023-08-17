@@ -14,7 +14,10 @@ class TestIBMContainerImageSecurityDisable(unittest.TestCase):
             "ibmcloud_api_key": "your_api_key",
             "resource_group_id": "your_resource_group_id",
             "config": {
-                "cluster": "your_cluster_id"
+                "cluster": "your_cluster_id",
+                "ingressImage": "ingress_image_version",
+                "type": "private_or_public",
+                "zone": "region"
             }
         }
         mock_module.return_value.params = module_params
