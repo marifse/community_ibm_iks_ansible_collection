@@ -27,7 +27,7 @@ class TestIBMContainerIngressALBCreate(unittest.TestCase):
         mock_auth_instance.get_iam_token.return_value = "your_iam_token"
 
         # Create instance of ImageSecret and mock its disableImageSecurity method
-        mock_image_secret_instance = mock_image_secret.return_value
+        mock_ingress_alb_create_instance = mock_ingress_alb_create.return_value
         mock_image_secret_instance.disableImageSecurity.return_value = (False, True)
 
         # Run the module
