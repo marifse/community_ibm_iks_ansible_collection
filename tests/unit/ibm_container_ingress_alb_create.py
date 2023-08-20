@@ -8,7 +8,7 @@ class TestIBMContainerIngressALBCreate(unittest.TestCase):
     @patch("ansible_collections.your_collection.your_module.ibm_container_ingress_alb_create.Authenticator")
     @patch("ansible_collections.your_collection.your_module.ibm_container_ingress_alb_create.ImageSecret")
     @patch("ansible_collections.your_collection.your_module.ibm_container_ingress_alb_create.AnsibleModule")
-    def test_run_module_success(self, mock_module, mock_image_secret, mock_authenticator):
+    def test_run_module_success(self, mock_module, mock_ingress_alb_create, mock_authenticator):
         # Mock the module parameters
         module_params = {
             "ibmcloud_api_key": "your_api_key",
