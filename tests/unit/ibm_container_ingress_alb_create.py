@@ -28,7 +28,7 @@ class TestIBMContainerIngressALBCreate(unittest.TestCase):
 
         # Create instance of ImageSecret and mock its disableImageSecurity method
         mock_ingress_alb_create_instance = mock_ingress_alb_create.return_value
-        mock_image_secret_instance.disableImageSecurity.return_value = (False, True)
+        mock_ingress_alb_create_instance.ingressALBCreate.return_value = (False, True)
 
         # Run the module
         ibm_container_ingress_alb_create.run_module()
@@ -37,7 +37,7 @@ class TestIBMContainerIngressALBCreate(unittest.TestCase):
         mock_authenticator.assert_called_once_with(api_key="your_api_key")
         mock_auth_instance.get_iam_token.assert_called_once()
         mock_image_secret.assert_called_once_with(cluster_id="your_cluster_id")
-        mock_image_secret_instance.disableImageSecurity.assert_called_once_with(module_params)
+        mock_image_secret_instance.IngressALBCreate.assert_called_once_with(module_params)
 
         # Additional assertions based on your requirements
 
