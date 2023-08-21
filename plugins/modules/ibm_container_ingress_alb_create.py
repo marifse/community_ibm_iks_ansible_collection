@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_ingress_alb_create
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Create a public or private ALB in a specified zone and VPC cluster.
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Create a public or private ALB in a specified zone and VPC cluster.
 options:
     ibmcloud_api_key:
         required: True
@@ -45,7 +45,7 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the ALB is to be created.
                 required: True
                 type: str
             enableByDefault:
@@ -55,17 +55,17 @@ options:
                 type: bool
             ingressImage:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ingress image version for ALB.
                 required: True
                 type: str
             type:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB type either private or publie.
                 required: True
                 type: str
             zone:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The zone where the ALB is to be creatd.
                 required: True
                 type: str
 """
