@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_ingress_nlb_regenerate_secret
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Regenerates cert for secret
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Regenerate the certificate and recreate the secret for an NLB subdomain.
 options:
     ibmcloud_api_key:
         required: True
@@ -39,13 +39,13 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the NLB secret is to be regenerated
                 required: True
                 type: str
 
             subdomain:
                 description:
-                    -   The Ingestion Key which needs to used for connecting to Sysdig Service Instance
+                    -   The subdomain
                 required: False
                 type : str
 """
