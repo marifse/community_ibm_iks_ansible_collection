@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_storage_attachment_delete
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: create IKS Cluster Storage Attachment
+short_description: Detach volume from given worker
 requirements: []
 description:
-    - Create the IKS Container Storage Attachment
+    - Detach volume from given worker
 options:
     ibmcloud_api_key:
         required: True
@@ -45,7 +45,7 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster where we have to attach the storage.
+                    - The cluster where we have to detach the storage.
                 required: True
                 type: str
 
