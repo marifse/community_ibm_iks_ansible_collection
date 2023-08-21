@@ -50,37 +50,37 @@ options:
                 type: str
             enable:
                 description:
-                    - Boolean value true or false.
+                    - Set to true to enable the ALB, or false to disable the ALB for the cluster.
                 required: False
                 type: bool
             albBuild:
                 description:
-                    - The ALB build version
+                    - The build number of the ALB.
                 required: False
                 type: str
             albID:
                 description:
-                    - The ALB ID which is required to be disabled.
+                    - The ID of the application load balancer (ALB).
                 required: True
                 type: str
             albType:
                 description:
-                    - The ALB type that can be private or public.
+                    - The type of ALB.
                 required: False
                 type: str
             authBuild:
                 description:
-                    - The auth. build.
+                    - The auth build of the ALB.
                 required: False
                 type: str
             createdDate:
                 description:
-                    - The ALB creation date.
+                    - The date the ALB was created.
                 required: False
                 type: str
             disableDeployment:
                 description:
-                    - The boolean value true or false to disable the ALB it should be true.
+                    - If set to true, the deployment of the ALB is disabled.
                 required: True
                 type: bool
             loadBalancerHostname:
@@ -90,22 +90,22 @@ options:
                 type: str
             name:
                 description:
-                    - The ALB name.
+                    - The name of the cluster that the ALB belongs to.
                 required: False
                 type: str
             numOfInstances:
                 description:
-                    - The number of instances.
+                    - Desired number of ALB replicas that you want in your cluster.
                 required: False
                 type: str
             resize:
                 description:
-                    - To resize the number of instances.
+                    - If set to true, resizing of the ALB is done.
                 required: False
                 type: bool
             state:
                 description:
-                    - The state of ALB.
+                    - The state of the ALB.
                 required: False
                 type: str
             status:
@@ -115,7 +115,7 @@ options:
                 type: str
             zone:
                 description:
-                    - The zone of the ALB.
+                    - The zone where you want to add ALBs.
                 required: False
                 type: str
 """
