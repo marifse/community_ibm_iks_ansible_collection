@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_update_master
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: The Delete the specified worker node from the cluster and new worker node will be added.
+short_description: Update the version of the Kubernetes cluster master node.
 requirements: []
 description:
-    - Delete the specified worker node from the cluster and create a new worker node in the same worker pool to replace the deleted worker node.
+    - Update the Kubernetes master to the default API version. During the update, you cannot access or change the cluster.
 options:
     ibmcloud_api_key:
         required: True
@@ -45,19 +45,19 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the master node kubernetes version is to be upgraded.
                 required: True
                 type: str
 
             force:
                 description:
-                    - The cluster id which needs to be monitored.
-                required: True
+                    - Forces the update for the cluster.
+                required: False
                 type: bool
 
             version:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The Kubernetes cluster version
                 required: True
                 type: str
 """
