@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_monitoring_config_remove
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: create IKS Cluster Storage Attachment
+short_description: Remove a Sysdig monitoring configuration from a cluster
 requirements: []
 description:
-    - Create the IKS Container Storage Attachment
+    - Remove an existing Sysdig monitoring configuration from a cluster. When you remove the monitoring configuration, pod and cluster metrics are no longer sent to your IBM Cloud Monitoring with Sysdig service instance.
 options:
     ibmcloud_api_key:
         required: True
@@ -58,9 +58,7 @@ EXAMPLES = r"""
     ibmcloud_api_key: "{{ name }}"
     config:
         cluster: "Your Cluster ID"
-        ingestionKey : "Your Volume Attachment ID"
         instance: "Your Volume ID"
-        privateEndpoint: "Your Worker ID"
 """
 
 from ..module_utils.auth import Authenticator
