@@ -23,7 +23,7 @@ version_added: "1.0.0"
 short_description: List the settings for all existing health check monitors in a cluster.
 requirements: []
 description:
-    - List the settings for all existing health check monitors in a cluster.
+    - List the health check monitor settings for all NLB subdomains.
 options:
     ibmcloud_api_key:
         required: True
