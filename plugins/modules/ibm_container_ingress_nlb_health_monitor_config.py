@@ -55,48 +55,48 @@ options:
                 type: str
             allowInsecureSet:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: False
                 type: str
             createdOn:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: False
                 type: str
             healthcheckProperties:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: False
                 type: list
                 elements: str
             desc:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: True
                 type: str
             followRedirectSet:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: False
                 type: str
             healtcheckPropertiesSetStatus:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: False
                 type: str
             modifiedOn:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: False
                 type: str
             monitorState:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: False
                 type: str
             nlbHost:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - .
                 required: True
                 type: str
 """
