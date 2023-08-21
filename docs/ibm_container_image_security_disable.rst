@@ -1,5 +1,5 @@
-ibm.container_image_security_disable module -- Disables the Image Security in an IBM Kubernetes Cluster
-===================================================
+ibm.container_image_security_disable module -- Disable image security enforcement for a cluster
+===============================================================================================
 
 Note
 
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_image_security_disable`.
 Synopsis
 --------
 
-This module disable the image security for an IBM IKS cluster.
+This module disable image security enforcement for a cluster.
 
 Requirements
 ------------
