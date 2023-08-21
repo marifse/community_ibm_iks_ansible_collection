@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_ingress_alb_enable
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Enable an existing ALB in a VPC cluster
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Enable an existing ALB in a VPC cluster.
 options:
     ibmcloud_api_key:
         required: True
@@ -45,77 +45,77 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id on which the ALB is to be disabled
                 required: True
                 type: str
             enable:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - Set to true to enable the ALB, or false to disable the ALB for the cluster.
                 required: False
                 type: bool
             albBuild:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The build number of the ALB.
                 required: False
                 type: str
             albID:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ID of the application load balancer (ALB).
                 required: True
                 type: str
             albType:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The type of ALB.
                 required: False
                 type: str
             authBuild:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The auth build of the ALB.
                 required: False
                 type: str
             createdDate:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The date the ALB was created.
                 required: False
                 type: str
             disableDeployment:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - If set to true, the deployment of the ALB is disabled.
                 required: False
                 type: bool
             loadBalancerHostname:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The hostname/dns name for ALB.
                 required: False
                 type: str
             name:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The name of the cluster that the ALB belongs to.
                 required: False
                 type: str
             numOfInstances:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - Desired number of ALB replicas that you want in your cluster.
                 required: False
                 type: str
             resize:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - If set to true, resizing of the ALB is done.
                 required: False
                 type: bool
             state:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The state of the ALB.
                 required: False
                 type: str
             status:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The status of the ALB.
                 required: False
                 type: str
             zone:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The zone where you want to add ALBs.
                 required: False
                 type: str
 """
