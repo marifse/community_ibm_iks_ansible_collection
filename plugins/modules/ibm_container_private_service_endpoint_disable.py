@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_private_service_endpoint_disable
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Disables a private service endpoint for a cluster
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Disables a private service endpoint for a cluster.
 options:
     ibmcloud_api_key:
         required: True
@@ -44,7 +44,7 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id on which the private service endpoint is to disabled
                 required: True
                 type: str
 """
