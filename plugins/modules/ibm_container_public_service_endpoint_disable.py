@@ -23,7 +23,7 @@ version_added: "1.0.0"
 short_description: The public service endpoint for a cluster is disabled.
 requirements: []
 description:
-    - The public service endpoint for a cluster is enabled.
+    - The public service endpoint for a cluster is disabled.
 options:
     ibmcloud_api_key:
         required: True
@@ -43,7 +43,7 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id on which the public service endpoint is to be disabled.
                 required: True
                 type: str
 """
