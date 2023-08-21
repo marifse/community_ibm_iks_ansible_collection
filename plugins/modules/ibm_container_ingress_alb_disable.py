@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_ingress_alb_disable
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Disable a public or private ALB in a specified zone and VPC cluster
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Disable a public or private ALB in a specified zone and VPC cluster.
 options:
     ibmcloud_api_key:
         required: True
@@ -45,77 +45,77 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the ALB is to be disabled
                 required: True
                 type: str
             enable:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - Boolean value true or false.
                 required: False
                 type: bool
             albBuild:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB build version
                 required: False
                 type: str
             albID:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB ID which is required to be disabled.
                 required: True
                 type: str
             albType:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB type that can be private or public.
                 required: False
                 type: str
             authBuild:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The auth. build.
                 required: False
                 type: str
             createdDate:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB creation date.
                 required: False
                 type: str
             disableDeployment:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The boolean value true or false to disable the ALB it should be true.
                 required: True
                 type: bool
             loadBalancerHostname:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB hostname/dns name.
                 required: False
                 type: str
             name:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB name.
                 required: False
                 type: str
             numOfInstances:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The number of instances.
                 required: False
                 type: str
             resize:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - To resize the number of instances.
                 required: False
                 type: bool
             state:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The state of ALB.
                 required: False
                 type: str
             status:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The status of the ALB.
                 required: False
                 type: str
             zone:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The zone of the ALB.
                 required: False
                 type: str
 """
