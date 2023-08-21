@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_ingress_alb_update
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Update ALBs in a cluster
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Update ALBs in a cluster
 options:
     ibmcloud_api_key:
         required: True
@@ -45,17 +45,17 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the ALB's are to be updated
                 required: True
                 type: str
             albBuild:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The ALB build IDs
                 required: True
                 type: str
             albList:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The list of the ALB's which are required to be updated
                 required: True
                 type: list
                 elements: str
