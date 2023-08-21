@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_pull_secret_enable
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: The public service endpoint for a cluster is disabled.
+short_description: Create an image pull secret to IBM Cloud Container Registry in the `default` namespace of the cluster
 requirements: []
 description:
-    - The public service endpoint for a cluster is enabled.
+    - Create an image pull secret to IBM Cloud Container Registry in the `default` namespace of the cluster.
 options:
     ibmcloud_api_key:
         required: True
@@ -45,7 +45,7 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the pull secret is to enabled
                 required: True
                 type: str
 """
