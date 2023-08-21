@@ -20,7 +20,7 @@ DOCUMENTATION = r"""
 module: ibm_container_ingress_nlb_delete_secret
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Remove a secret from an NLB subdomain
 requirements: []
 description:
     - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
@@ -39,7 +39,7 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the NLB secret is to be deleted
                 required: True
                 type: str
 
