@@ -1,5 +1,5 @@
-ibm.container_ingress_alb_enable   module -- Enable a public or private ALB in a specified zone and VPC cluster.
-===============================================================================================================
+ibm.container_ingress_alb_enable   module -- Enable an existing ALB in a VPC cluster.
+====================================================================================
 
 Note
 
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_ingress_alb_enable`.
 Synopsis
 --------
 
-- This module enable a public or private ALB in a specified zone and VPC cluster.
+- This module enables an existing ALB in a VPC cluster.
 
 Requirements
 ------------
