@@ -50,7 +50,7 @@ options:
                 type: str
             nlbHost:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB subdomain that you want health check monitor settings for..
                 required: True
                 type: str
 """
