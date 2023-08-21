@@ -55,48 +55,48 @@ options:
                 type: str
             allowInsecureSet:
                 description:
-                    - .
+                    - Allow insecure set
                 required: False
                 type: str
             createdOn:
                 description:
-                    - .
+                    - Created on
                 required: False
                 type: str
             healthcheckProperties:
                 description:
-                    - .
+                    - Health check properties
                 required: False
                 type: list
                 elements: str
             desc:
                 description:
-                    - .
+                    - Desc
                 required: True
                 type: str
             followRedirectSet:
                 description:
-                    - .
+                    - Follow redirect set
                 required: False
                 type: str
             healtcheckPropertiesSetStatus:
                 description:
-                    - .
+                    - Health check properties
                 required: False
                 type: str
             modifiedOn:
                 description:
-                    - .
+                    - Modified on
                 required: False
                 type: str
             monitorState:
                 description:
-                    - .
+                    - Monitor State
                 required: False
                 type: str
             nlbHost:
                 description:
-                    - .
+                    - DNS name subdomain
                 required: True
                 type: str
 """
