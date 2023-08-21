@@ -1,4 +1,4 @@
-ibm.container_image_security_enable module -- Enables the Image Security in an IBM Kubernetes Cluster
+ibm.container_image_security_enable module -- Enable image security enforcement for a cluster
 ===================================================
 
 Note
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_image_security_enable`.
 Synopsis
 --------
 
-This module enable the image security in an IBM IKS cluster.
+This module enable image security enforcement for a cluster
 
 Requirements
 ------------
