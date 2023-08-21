@@ -20,7 +20,7 @@ DOCUMENTATION = r"""
 module: ibm_container_replace_worker
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: The Delete the specified worker node from the cluster and new worker node will be added.
+short_description: Delete the specified worker node from the cluster and new worker node will be added.
 requirements: []
 description:
     - Delete the specified worker node from the cluster and create a new worker node in the same worker pool to replace the deleted worker node.
