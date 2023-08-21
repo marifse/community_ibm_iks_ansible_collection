@@ -50,22 +50,22 @@ options:
                 type: str
             enableByDefault:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - If set to true, the ALB is enabled by default.
                 required: True
                 type: bool
             ingressImage:
                 description:
-                    - The ingress image version for ALB.
+                    - The type of Ingress image that you want to use for your ALB deployment.
                 required: True
                 type: str
             type:
                 description:
-                    - The ALB type either private or publie.
+                    - The type of ALB that you want to create.
                 required: True
                 type: str
             zone:
                 description:
-                    - The zone where the ALB is to be creatd.
+                    - The zone where you want to deploy the ALB.
                 required: True
                 type: str
 """
