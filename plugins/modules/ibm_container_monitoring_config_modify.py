@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_monitoring_config_modify
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: create IKS Cluster Storage Attachment
+short_description: Update a Sysdig monitoring configuration in the cluster
 requirements: []
 description:
-    - Create the IKS Container Storage Attachment
+    - Update an existing Sysdig monitoring configuration in the cluster. Changes can be made to the monitoring instance connected to the cluster, ingestion key, or use of public or private endpoints for the monitoring instance
 options:
     ibmcloud_api_key:
         required: True
