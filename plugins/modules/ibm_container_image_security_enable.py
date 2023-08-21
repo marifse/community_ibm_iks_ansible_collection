@@ -45,7 +45,7 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id on which the image security is to be enabled.
                 required: True
                 type: str
 """
