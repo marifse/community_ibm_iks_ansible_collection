@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_image_security_enable
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Enable image security enforcement for a cluster
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Enable image security enforcement for a cluster.
 options:
     ibmcloud_api_key:
         required: True
