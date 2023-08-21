@@ -35,7 +35,7 @@ options:
         required: True
         type: str
         description:
-            - The IBM Cloud API Key.
+            - The resource group ID.
 
     config:
         description:
@@ -45,19 +45,19 @@ options:
         suboptions:
             cluster:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The cluster id where the worker node is to be replaced
                 required: True
                 type: str
 
             update:
                 description:
-                    - The cluster id which needs to be monitored.
-                required: True
+                    - Boolean value for the worker node to be replaced, should be true
+                required: False
                 type: bool
 
             workerID:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The existing worker ID which is desired to be replaced with new worker.
                 required: True
                 type: str
 """
