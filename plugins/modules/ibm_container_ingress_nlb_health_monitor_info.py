@@ -20,10 +20,10 @@ DOCUMENTATION = r"""
 module: ibm_container_ingress_nlb_health_monitor_info
 author: arifnafees (@marifse)
 version_added: "1.0.0"
-short_description: Delete a secret from an NLB subdomain in your cluster
+short_description: Enable or disable a health check monitor for an NLB subdomain
 requirements: []
 description:
-    - Delete a secret from an NLB subdomain in your cluster and prevent future renewal of the certificate.
+    - Enable or disable a health check monitor for an NLB subdomain.
 options:
     ibmcloud_api_key:
         required: True
@@ -55,7 +55,7 @@ options:
                 type: str
             nlbDnsType:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB DNS type.
                 required: True
                 type: str
             nlbHost:
