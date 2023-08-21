@@ -60,38 +60,38 @@ options:
                 type: str
             nlbHost:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB subdomain that you want health check monitor settings for.
                 required: True
                 type: str
             nlbIPArray:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB IP Array
                 required: True
                 type: list
                 elements: str
             nlbMonitorState:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB Monitor state.
                 required: True
                 type: str
             nlbSslSecretName:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB SSL Secret Name
                 required: True
                 type: str
             nlbStatusMessage:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB status Message
                 required: True
                 type: str
             nlbType:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB type
                 required: True
                 type: str
             secretNamespace:
                 description:
-                    - The cluster id which needs to be monitored.
+                    - The NLB secret Namespace
                 required: True
                 type: str
 """
