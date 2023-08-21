@@ -94,7 +94,7 @@ Parameters
     </div></td>
     <td><div class="ansible-option-cell">
       <p>Volume Attachment ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Any fake value can be passed</span></p>
+      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
  <tr class="row-even">
