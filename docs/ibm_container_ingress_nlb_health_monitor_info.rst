@@ -216,7 +216,7 @@ Example usage:
            clusterID: "Your Cluster ID"
            idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
            crn: ""
-           isDefault: ""
+           isDefault: "boolean value (true or false)"
            nlbDnsType: ""
            nlbIPArray: ""
            nlbMonitorState: ""
