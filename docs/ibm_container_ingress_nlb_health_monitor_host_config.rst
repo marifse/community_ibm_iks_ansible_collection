@@ -1,5 +1,5 @@
-ibm.container_ingress_nlb_health_monitor_host_config module -- Create and optionally enable a health check monitor for an existing NLB subdomain in a cluster.
-=============================================================================================================================================================
+ibm.container_ingress_nlb_health_monitor_host_config module -- View the health check monitor settings for an NLB subdomain.
+===========================================================================================================================
 
 Note
 
@@ -18,7 +18,7 @@ To use it in a playbook, specify: :code:`ibm.container_ingress_nlb_health_monito
 Synopsis
 --------
 
-- This module create and optionally enable a health check monitor for an existing NLB subdomain in a cluster.
+- This module view the health check monitor settings for an NLB subdomain.
 
 Requirements
 ------------
