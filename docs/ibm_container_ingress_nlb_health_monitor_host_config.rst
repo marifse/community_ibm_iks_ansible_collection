@@ -5,9 +5,9 @@ Note
 
 This module is part of the ibm collection (version 1.0.0).
 
-To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_ingress_nlb_health_monitor_config_module_requirements>` for details.
+To install it, use: ansible-galaxy collection install ibm. You need further requirements to be able to use this module, see :ref:`Requirements <ansible_collections.ibm.ibm_container_ingress_nlb_health_monitor_host_config_module_requirements>` for details.
 
-To use it in a playbook, specify: :code:`ibm.container_ingress_nlb_health_monitor_config`.
+To use it in a playbook, specify: :code:`ibm.container_ingress_nlb_health_monitor_host_config`.
 
 .. contents::
    :local:
