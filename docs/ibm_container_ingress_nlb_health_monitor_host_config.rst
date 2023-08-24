@@ -70,20 +70,6 @@ Parameters
   </tr>
   <tr class="row-even">
     <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-clusterID"></div>
-      <p class="ansible-option-title"><strong>clusterID</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-clusterID" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>Cluster ID.</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices">Cluster ID, on which to enable a health check monitor for an existing NLB subdomain:</span></p>
-    </div></td>
-  </tr>
-  <tr class="row-even">
-    <td><div class="ansible-option-cell">
       <div class="ansibleOptionAnchor" id="parameter-idOrName"></div>
       <p class="ansible-option-title"><strong>idOrName</strong></p>
       <a class="ansibleOptionLink" href="#parameter-idOrName" title="Permalink to this option"></a>
@@ -94,76 +80,6 @@ Parameters
     <td><div class="ansible-option-cell">
       <p>Cluster Name.</p>
       <p class="ansible-option-line"><span class="ansible-option-choices">Cluster Name / ID, on which to enable a health check monitor for an existing NLB subdomain:</span></p>
-    </div></td>
-  </tr>
-   <tr class="row-even">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-allowInsecureSet"></div>
-      <p class="ansible-option-title"><strong>allowInsecureSet</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-idOrName" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">Boolean</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>True or False</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
-    </div></td>
-  </tr>
-  <tr class="row-even">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-healthcheckProperties"></div>
-      <p class="ansible-option-title"><strong>healthcheckProperties</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-idOrName" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>backend-pool</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
-    </div></td>
-  </tr>
-  <tr class="row-even">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-desc"></div>
-      <p class="ansible-option-title"><strong>desc</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-desc" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>Monitor State</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
-    </div></td>
-  </tr>
-   <tr class="row-even">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-followRedirectSet"></div>
-      <p class="ansible-option-title"><strong>followRedirectSet</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-followRedirectSet" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>/</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
-    </div></td>
-  </tr>
-  <tr class="row-even">
-    <td><div class="ansible-option-cell">
-      <div class="ansibleOptionAnchor" id="parameter-healtcheckPropertiesSetStatus"></div>
-      <p class="ansible-option-title"><strong>healtcheckPropertiesSetStatus</strong></p>
-      <a class="ansibleOptionLink" href="#parameter-healtcheckPropertiesSetStatus" title="Permalink to this option"></a>
-      <p class="ansible-option-type-line">
-        <span class="ansible-option-type">string</span>
-      </p>
-    </div></td>
-    <td><div class="ansible-option-cell">
-      <p>enabled or disabled</p>
-      <p class="ansible-option-line"><span class="ansible-option-choices"></span></p>
     </div></td>
   </tr>
   <tr class="row-even">
@@ -212,13 +128,7 @@ Example usage:
          ibmcloud_api_key: "{{ ibmcloud_api_key }}"
          resource_group_id: "{{ resource_group_id }}"
          config:
-           clusterID: "Your Cluster ID"
            idOrName: "Cluster Name / ID, on which to list the settings for all existing health check monitors"
-           allowInsecureSet: "true"
-           healthcheckProperties: "backend-pool"
-           desc: "Monitor State"
-           followRedirectSet: "/"
-           healtcheckPropertiesSetStatus: "enabled || disabled"
            nlbHost: "NLB Host Domain Name"
       
 
